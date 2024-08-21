@@ -1,0 +1,354 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Colors for dark mode */
+    --background-dark-primary: #0D1B2A;
+    --background-dark-secondary: #1B263B;
+
+    --text-color-dark-primary: #E0E1DD;
+    --text-color-dark-secondary: #FF8591;
+
+
+    /* Colors for light mode */
+
+    --background-light-primary: #51C1C8;
+    --background-light-secondary: #E2FDFF;
+
+    --text-color-light-primary: #0D1B2A;
+    --text-color-light-secondary: #D62839;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Robot, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION */
+
+.navigation {
+    background-color: var(--background-dark-primary);
+    color: var(--text-color-dark-primary);
+    height: 91px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 3.2rem;
+    font-family: "Architects Daughter", cursive;
+    margin-left: 7rem;
+}
+
+.links-container {
+    display: flex;
+    margin-right: 7rem;
+}
+
+a {
+    color: var(--text-color-dark-primary);
+    text-decoration: none;
+}
+
+.links-container li {
+    padding-left: 5rem;
+    list-style: none;
+    font-size: 32px;
+}
+
+/* HEADER */
+
+.header {
+    height: 70rem;
+    background-color: var(--background-dark-secondary);
+    color: var(--text-color-dark-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    margin-left: 18rem;
+    height: 560px;
+    width: 420px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.container h2 {
+    font-size: 3.2rem;
+    color: var(--text-color-dark-secondary);
+    margin-bottom: 6rem;
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 2rem 5.7rem;
+    font-size: 2.4rem;
+    border-radius: 5rem;
+    background-color: var(--text-color-dark-secondary);
+    color: var(--background-dark-primary);
+    font-weight: bold;
+    margin-bottom: 8.5rem;
+    border: 0;
+}
+
+/* ABOUT ME */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color-dark-primary);
+    background-color: var(--background-dark-primary);
+    height: 40rem;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 3.2rem;
+    margin-top: 8rem;
+}
+
+.about p {
+    font-size: 2.6rem;
+    margin-top: 5rem;
+    margin: 5rem 18rem 8rem 18rem;
+}
+
+/* SKILLS */
+
+.skills {
+    height: 120rem;
+    background-color: var(--background-dark-secondary);
+}
+
+.first-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills h2 {
+    color: var(--text-color-dark-primary);
+    font-size: 3.2rem;
+    margin-top: 8rem;
+}
+
+.skills h3 {
+    color: var(--text-color-dark-secondary);
+    font-size: 2.6rem;
+    margin-top: 3rem;
+}
+
+.skills img {
+    width: 18rem;
+    height: 18rem;
+}
+
+.web {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9rem;
+    margin: 8rem 7rem 4rem 7rem;
+}
+
+.mysql {
+    filter: invert(99%) sepia(0%) saturate(447%) hue-rotate(171deg) brightness(95%) contrast(86%);
+}
+
+.second-row {
+    display: flex;
+}
+
+.other {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.other-icons {
+    display: flex;
+    gap: 8rem;
+    margin-top: 8rem;
+}
+
+/* CERTIFICATIONS */
+
+.certifications {
+    height: 90rem;
+    text-align: center;
+    background-color: var(--background-dark-primary);
+}
+
+.certifications h2 {
+    color: var(--text-color-dark-primary);
+    font-size: 3.2rem;
+    padding-top: 8rem;
+}
+
+.certifications ul {
+    margin-top: 4rem;
+    list-style-position: inside;
+}
+
+.certifications li {
+    font-size: 2.6rem;
+    color: var(--text-color-dark-primary);
+    padding-bottom: 3rem;
+}
+
+.certifications-logo {
+    padding-top: 2rem;
+}
+
+.ffc-logo {
+    padding-top: 5rem;
+}
+
+/* PROJECTS */
+
+.projects {
+    background-color: var(--background-dark-secondary);
+    color: var(--text-color-dark-primary);
+}
+
+.projects h2 {
+    font-size: 3.2rem;
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8rem;
+    position: relative;
+}
+
+.project img {
+    width: 56rem;
+    height: 49rem;
+}
+
+.card {
+    background-color: var(--background-dark-primary);
+    opacity: 0.95;
+    border-radius: 1rem;
+    height: 35rem;
+    width: 60rem;
+}
+
+.card h3 {
+    color: var(--text-color-dark-secondary);
+    font-size: 2.6rem;
+    margin: 5rem 0 3rem 4rem;
+}
+
+.card span {
+    font-size: 2rem;
+}
+
+.card p {
+    font-size: 1.8rem;
+    margin: 0 6.5rem 4rem 4rem;
+}
+
+.card i {
+    padding-left: 4rem;
+}
+
+.tools {
+    margin: 0 0 3rem 4rem;
+}
+
+.tools span {
+    margin-right: 3rem;
+}
+
+.first {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-20%, -30%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.second {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    transform: translateY(-30%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* CONTACT */
+
+.contact {
+    background-color: var(--background-dark-primary);
+    height: 38rem;
+    text-align: center;
+    color: var(--text-color-dark-primary);
+}
+
+.contact div {
+    padding-top: 8.5rem;
+}
+
+.contact p {
+    padding-top: 6rem;
+    width: 45rem;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 2rem 5.7rem;
+    font-size: 2.4rem;
+    border-radius: 5rem;
+    background-color: var(--text-color-dark-secondary);
+    color: var(--background-dark-primary);
+    font-weight: bold;
+    border: 0;
+}
+
+.contact-icons {
+    padding-top: 6rem;
+    width: 33rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+/* FOOTER */
+
+footer {
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-dark-secondary);
+    color: var(--text-color-dark-primary);
+    font-size: 2rem;
+}
