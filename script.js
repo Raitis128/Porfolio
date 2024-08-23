@@ -1,6 +1,6 @@
 const toggle = document.getElementById("toggle");
+const burger = document.getElementById("burger");
 const navigation = document.getElementById("navigation");
-const icon = document.getElementById("icon");
 const header = document.getElementById("header");
 const about = document.getElementById("about");
 const skills = document.getElementById("skills");
@@ -8,8 +8,12 @@ const certifications = document.getElementById("certifications");
 const projects = document.getElementById("projects");
 const contact = document.getElementById("contact");
 const footer = document.getElementById("footer");
+const navigationHeader = document.getElementById("navigationHeader");
+const hiddenNav = document.querySelector(".hidden-nav");
 
 //  ICONS
+const burgerIcon = document.getElementById("burgerIcon");
+const moon = document.getElementById("moon");
 const instagramElements = document.querySelectorAll(".instagram");
 const linkedinElements = document.querySelectorAll(".linkedin");
 const githubElements = document.querySelectorAll(".github");
@@ -25,16 +29,16 @@ const codecademyLogo = document.querySelector(
 );
 
 toggle.addEventListener("click", () => {
-  if (icon.classList.contains("fa-moon")) {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
+  if (moon.classList.contains("fa-moon")) {
+    moon.classList.remove("fa-moon");
+    moon.classList.add("fa-sun");
 
     ffcLogo.src = "img/icons/ffc-light.svg";
     metaLogo.src = "img/icons/meta-light.svg";
     codecademyLogo.src = "img/icons/codecademy-light.svg";
   } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
+    moon.classList.remove("fa-sun");
+    moon.classList.add("fa-moon");
 
     ffcLogo.src = "img/icons/ffc-dark.svg";
     metaLogo.src = "img/icons/meta-dark.svg";
@@ -49,6 +53,7 @@ toggle.addEventListener("click", () => {
   projects.classList.toggle("light-mode-secondary-background");
   contact.classList.toggle("light-mode-primary-background");
   footer.classList.toggle("light-mode-secondary-background");
+  navigationHeader.classList.toggle("light-mode-primary-background");
 });
 
 toggle.addEventListener("mouseover", () => {
@@ -57,6 +62,22 @@ toggle.addEventListener("mouseover", () => {
 
 toggle.addEventListener("mouseout", () => {
   toggle.classList.remove("fa-beat");
+});
+
+burger.addEventListener("click", () => {
+  if (burgerIcon.classList.contains("fa-bars")) {
+    burgerIcon.classList.remove("fa-bars");
+    burgerIcon.classList.add("fa-xmark");
+
+    hiddenNav.style.display = "block";
+    navigation.classList.add("border");
+  } else {
+    burgerIcon.classList.remove("fa-xmark");
+    burgerIcon.classList.add("fa-bars");
+
+    hiddenNav.style.display = "none";
+    navigation.classList.remove("border");
+  }
 });
 
 instagramElements.forEach((instagram) => {

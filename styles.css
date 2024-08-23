@@ -30,6 +30,10 @@ html {
 
 /* !NAVIGATION */
 
+.border {
+    border-bottom: 1px solid var(--text-color-dark-primary);
+}
+
 .navigation {
     background-color: var(--background-dark-primary);
     color: var(--text-color-dark-primary);
@@ -74,7 +78,25 @@ a {
     cursor: pointer;
 }
 
-.hidden {
+.hidden-nav {
+    display: none;
+}
+
+.hidden-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    background-color: var(--background-dark-primary);
+    border-bottom: 1px solid var(--text-color-dark-primary);
+    font-size: 2rem;
+}
+
+.hidden-nav li {
+    list-style: none;
+}
+
+.header>a {
     display: none;
 }
 
@@ -963,7 +985,7 @@ footer {
 
 /* !LIGHT MODE */
 
-.light-mode-primary-background, .light-mode-secondary-background .card {
+.light-mode-primary-background, .light-mode-secondary-background .card, .light-mode-primary-background a {
     background-color: var(--background-light-primary);
 }
 
