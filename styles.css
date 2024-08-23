@@ -55,6 +55,10 @@ a {
     text-decoration: none;
 }
 
+.links-container a:hover {
+    color: var(--text-color-dark-secondary);
+}
+
 .links-container li {
     padding-left: 5rem;
     list-style: none;
@@ -66,7 +70,8 @@ a {
     border: 0;
     font-size: 3.2rem;
     color: var(--text-color-dark-primary);
-    padding-right: 7rem;
+    margin-right: 7rem;
+    cursor: pointer;
 }
 
 .hidden {
@@ -122,6 +127,7 @@ a {
 }
 
 .container button {
+    cursor: pointer;
     padding: 2rem 5.7rem;
     font-size: 2.4rem;
     border-radius: 5rem;
@@ -130,6 +136,12 @@ a {
     font-weight: bold;
     margin-bottom: 8.5rem;
     border: 0;
+}
+
+.container button:hover {
+    -webkit-box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 1);
 }
 
 /* !ABOUT ME */
@@ -237,6 +249,10 @@ a {
     font-size: 2.6rem;
     color: var(--text-color-dark-primary);
     padding-bottom: 3rem;
+}
+
+.certifications a {
+    display: inline-block;
 }
 
 .certifications-logo {
@@ -356,6 +372,12 @@ a {
     color: var(--background-dark-primary);
     font-weight: bold;
     border: 0;
+}
+
+.button:hover {
+    -webkit-box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 1);
 }
 
 .contact-icons {
