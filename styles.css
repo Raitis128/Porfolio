@@ -674,15 +674,11 @@ footer {
     }
 
     .nav-btn {
-        padding-right: 0;
+        margin-right: 3rem;
     }
 
     .nav-btn:first-of-type {
         margin-right: 7rem;
-    }
-
-    .navigation div {
-        margin-right: 3rem;
     }
 
     /* !HEADER */
@@ -800,6 +796,7 @@ footer {
         text-align: left;
         padding-left: 2rem;
         height: 42.8rem;
+        padding-right: 2rem;
     }
 
     .certifications h2 {
