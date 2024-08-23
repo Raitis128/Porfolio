@@ -5,7 +5,7 @@
 }
 
 :root {
-    /* Colors for dark mode */
+    /* !Colors for dark mode */
     --background-dark-primary: #0D1B2A;
     --background-dark-secondary: #1B263B;
 
@@ -13,7 +13,7 @@
     --text-color-dark-secondary: #FF8591;
 
 
-    /* Colors for light mode */
+    /* !Colors for light mode */
 
     --background-light-primary: #51C1C8;
     --background-light-secondary: #E2FDFF;
@@ -28,7 +28,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* NAVIGATION */
+/* !NAVIGATION */
 
 .navigation {
     background-color: var(--background-dark-primary);
@@ -58,10 +58,30 @@ a {
 .links-container li {
     padding-left: 5rem;
     list-style: none;
-    font-size: 32px;
+    font-size: 3.2rem;
 }
 
-/* HEADER */
+.nav-btn {
+    background-color: transparent;
+    border: 0;
+    font-size: 3.2rem;
+    color: var(--text-color-dark-primary);
+    padding-right: 7rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* !HEADER */
+
+#img2 {
+    display: none;
+}
+
+#img3 {
+    display: none;
+}
 
 .header {
     height: 70rem;
@@ -101,7 +121,7 @@ a {
     justify-content: space-evenly;
 }
 
-button {
+.container button {
     padding: 2rem 5.7rem;
     font-size: 2.4rem;
     border-radius: 5rem;
@@ -112,7 +132,7 @@ button {
     border: 0;
 }
 
-/* ABOUT ME */
+/* !ABOUT ME */
 
 .about {
     display: flex;
@@ -134,10 +154,10 @@ button {
     margin: 5rem 18rem 8rem 18rem;
 }
 
-/* SKILLS */
+/* !SKILLS */
 
 .skills {
-    height: 120rem;
+
     background-color: var(--background-dark-secondary);
 }
 
@@ -178,6 +198,7 @@ button {
 
 .second-row {
     display: flex;
+    padding-bottom: 10rem;
 }
 
 .other {
@@ -193,7 +214,7 @@ button {
     margin-top: 8rem;
 }
 
-/* CERTIFICATIONS */
+/* !CERTIFICATIONS */
 
 .certifications {
     height: 90rem;
@@ -226,7 +247,11 @@ button {
     padding-top: 5rem;
 }
 
-/* PROJECTS */
+/* !PROJECTS */
+
+.small {
+    display: none;
+}
 
 .projects {
     background-color: var(--background-dark-secondary);
@@ -290,20 +315,20 @@ button {
 .first {
     position: absolute;
     top: 30%;
-    left: 20%;
-    transform: translate(-20%, -30%);
+    left: 30%;
+    transform: translate(-30%, -30%);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .second {
     position: absolute;
     top: 30%;
-    right: 15%;
+    right: 22%;
     transform: translateY(-30%);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* CONTACT */
+/* !CONTACT */
 
 .contact {
     background-color: var(--background-dark-primary);
@@ -341,7 +366,7 @@ button {
     margin: 0 auto;
 }
 
-/* FOOTER */
+/* !FOOTER */
 
 footer {
     height: 9rem;
@@ -351,4 +376,597 @@ footer {
     background-color: var(--background-dark-secondary);
     color: var(--text-color-dark-primary);
     font-size: 2rem;
+    font-weight: bold;
+}
+
+/* !MEDIA QUERY */
+
+@media only screen and (max-width: 1960px) {
+    .first {
+        left: 25%;
+    }
+
+    .second {
+        right: 15%;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .first {
+        left: 18%;
+    }
+
+    .second {
+        right: 5%;
+    }
+
+    .logo, .links-container li {
+        font-size: 2.6rem;
+    }
+
+    .about p {
+        font-size: 2.3rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    /* !NAVIGATION */
+    .logo {
+        font-size: 2.4rem;
+    }
+
+    .navigation ul {
+        display: none;
+    }
+
+    .hidden {
+        display: inline;
+    }
+
+    /* !HEADER */
+
+    #img1 {
+        display: none;
+    }
+
+    #img2 {
+        display: block;
+    }
+
+    .header {
+        height: 40rem;
+    }
+
+    .container h1 {
+        font-size: 3.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .container h2 {
+        font-size: 2.8rem;
+        margin-bottom: 3.8rem;
+    }
+
+    .container button {
+        font-size: 2rem;
+        padding: 1.7rem 3.3rem;
+        margin-bottom: 5rem;
+    }
+
+    .container .fa-4x {
+        font-size: 3.5rem;
+    }
+
+    .header img {
+        width: 30rem;
+        height: 33rem;
+    }
+
+    /* !ABOUT  */
+    .about {
+        height: 27rem;
+    }
+
+    .about p {
+        font-size: 2rem;
+        margin: 2rem 7rem 4rem;
+    }
+
+    .about h2 {
+        font-size: 2.4rem;
+        margin-top: 4rem;
+    }
+
+    /* !SKILLS  */
+
+    .skills h2 {
+        font-size: 2.4rem;
+        margin-top: 4rem;
+    }
+
+    .skills h3 {
+        font-size: 2.2rem;
+        margin-top: 2rem;
+    }
+
+    .skills img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .web {
+        gap: 5rem;
+        margin: 5rem 7rem 4rem;
+    }
+
+    .second-row {
+        padding-bottom: 5rem;
+    }
+
+    /* !CERTIFICATIONS */
+
+    .certifications {
+        height: 62rem;
+    }
+
+    .certifications h2 {
+        font-size: 2.4rem;
+        padding-top: 4rem;
+    }
+
+    .certifications ul {
+        margin-top: 3rem;
+    }
+
+    .certifications li {
+        padding-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    .ffc-logo {
+        padding-top: 4rem;
+        width: 27rem;
+    }
+
+    .meta {
+        width: 15rem;
+    }
+
+    .codecademy {
+        width: 14rem;
+    }
+
+    /* !PROJECTS */
+
+    .projects h2 {
+        font-size: 2.4rem;
+        padding: 4rem 0 5rem;
+    }
+
+    .project {
+        padding-bottom: 5rem;
+    }
+
+    .first {
+        left: 18%;
+    }
+
+    .second {
+        right: 5%;
+    }
+
+    .project img {
+        width: 39rem;
+        height: 33rem;
+    }
+
+    .card {
+        width: 42rem;
+        height: 24rem;
+    }
+
+    .card h3 {
+        font-size: 2rem;
+        margin: 4rem 0 2rem 3.5rem;
+    }
+
+    .tools {
+        margin: 0 0 2.5rem 3.5rem;
+    }
+
+    .card span {
+        font-size: 1.4rem;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+        margin: 0 0 3rem 3.5rem;
+    }
+
+    .card .fa-4x {
+        font-size: 2rem !important;
+    }
+
+    .card a:first-of-type {
+        padding-left: 3.5rem;
+    }
+
+    .card a:last-of-type {
+        padding-left: 1.5rem;
+    }
+
+    .card i {
+        padding: 0;
+    }
+
+    /* !CONTACT */
+
+    .contact {
+        height: 33rem;
+    }
+
+    .contact div {
+        padding-top: 7rem;
+    }
+
+    .contact p {
+        padding-top: 6rem;
+        font-size: 1.5rem;
+    }
+
+    .contact-icons {
+        padding-top: 5.8rem;
+    }
+
+    .contact .fa-4x {
+        font-size: 3.5rem;
+    }
+
+    .button {
+        padding: 2rem 5rem;
+    }
+
+    /* !FOOTER */
+
+    footer {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .first {
+        left: 20%;
+    }
+
+    .about p {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    /* !NAVIGATION */
+
+    .logo {
+        margin-left: 3rem;
+    }
+
+    .nav-btn {
+        padding-right: 0;
+    }
+
+    .nav-btn:first-of-type {
+        margin-right: 7rem;
+    }
+
+    .navigation div {
+        margin-right: 3rem;
+    }
+
+    /* !HEADER */
+
+    .header {
+        height: 40.6rem;
+        align-items: normal;
+    }
+
+    #img2 {
+        display: none;
+    }
+
+    #img3 {
+        display: block;
+    }
+
+    .header img {
+        width: 16.5rem;
+        height: 18rem;
+        margin-left: 0;
+    }
+
+    .container h1 {
+        font-size: 2.4rem;
+        padding: 2.5rem 0 1rem;
+        margin: 0;
+    }
+
+    .container button {
+        margin: 0;
+        padding: 0.9rem 1.9rem;
+        font-size: 1.6rem;
+    }
+
+    .container h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .button-container {
+        display: flex;
+        padding-top: 3.7rem;
+    }
+
+    .button-container form {
+        margin-right: 3rem;
+    }
+
+    .icons a {
+        margin-right: 3rem;
+    }
+
+    .icons a:last-of-type {
+        margin-right: 0;
+    }
+
+    /* !ABOUT */
+
+    .about {
+        height: 35.7rem;
+        align-items: flex-start;
+    }
+
+    .about h2 {
+        margin-left: 2rem;
+    }
+
+    .about p {
+        margin: 2rem 2rem 4rem 2rem;
+    }
+
+    /* !SKILLS */
+
+    .skills img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .first-row {
+        align-items: flex-start;
+    }
+
+    .first-row h2, .first-row h3, .second-row h3 {
+        margin-left: 2rem;
+    }
+
+    .web {
+        gap: 3rem;
+        margin: 0;
+        margin-top: 2rem;
+    }
+
+    .second-row {
+        flex-direction: column;
+    }
+
+    .other {
+        align-items: flex-start;
+    }
+
+    .other-icons {
+        gap: 3rem;
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+
+    .skills h3 {
+        margin-top: 3rem;
+    }
+
+    /* !CERTIFICATIONS */
+
+    .certifications {
+        text-align: left;
+        padding-left: 2rem;
+        height: 42.8rem;
+    }
+
+    .certifications h2 {
+        font-size: 2.2rem;
+    }
+
+    .certifications li {
+        font-size: 1.4rem;
+        padding-bottom: 1rem;
+    }
+
+    .certifications ul {
+        margin-top: 2rem;
+    }
+
+    .ffc-logo {
+        padding-top: 2rem;
+        width: 15.7rem;
+    }
+
+    .meta {
+        width: 7.7rem;
+    }
+
+    .codecademy {
+        width: 8.6rem;
+    }
+
+    /* !PROJECTS */
+
+    .projects h2 {
+        text-align: left;
+        margin-left: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .project img {
+        width: 35rem;
+        height: 16.4rem;
+    }
+
+    .card {
+        display: none;
+    }
+
+    .small {
+        display: inline;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .project h3 {
+        color: var(--text-color-dark-secondary);
+        font-size: 1.8rem;
+        display: inline-block;
+        padding-bottom: 1rem;
+        margin-left: 2rem;
+    }
+
+    .project a {
+        padding-left: 2rem;
+    }
+
+    .project p {
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .project img, .tools {
+        margin: 0 auto;
+    }
+
+    .tools {
+        margin-top: 1rem;
+    }
+
+    .tools span {
+        margin-right: 6rem;
+        font-size: 1.4rem;
+    }
+
+    .tools span:last-of-type {
+        margin-right: 0;
+    }
+
+    /* !CONTACTS */
+
+    .contact {
+        height: 28rem;
+    }
+
+    .contact p {
+        padding: 4.8rem 7.3rem 0;
+        width: auto;
+    }
+
+    .button {
+        padding: 1.3rem 3.5rem;
+        font-size: 1.6rem;
+    }
+
+    .contact div {
+        padding-top: 6rem;
+    }
+
+    .contact-icons {
+        padding-top: 3rem;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .about {
+        height: 40rem;
+    }
+
+    .certifications {
+        height: 45rem;
+    }
+
+    .web {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        justify-content: left;
+    }
+
+    .project img {
+        width: 30rem;
+        height: 14.4rem;
+    }
+
+    .tools span {
+        margin-right: 4rem;
+    }
+
+    .nav-btn:first-of-type {
+        margin-right: 3rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .about {
+        height: 43rem;
+    }
+
+    .certifications {
+        height: 47rem;
+    }
+
+    .contact-icons {
+        width: 100%;
+    }
+}
+
+
+/* !LIGHT MODE */
+
+.light-mode-primary-background, .light-mode-secondary-background .card {
+    background-color: var(--background-light-primary);
+}
+
+.light-mode-primary-background a, .light-mode-primary-background .nav-btn, .light-mode-primary-background span, .light-mode-primary-background h2, .light-mode-primary-background li,
+.light-mode-secondary-background a, .light-mode-primary-background p, .light-mode-secondary-background h1, .light-mode-secondary-background h2, .light-mode-secondary-background p,
+.light-mode-secondary-background span {
+    color: var(--text-color-light-primary);
+}
+
+.light-mode-secondary-background {
+    background-color: var(--background-light-secondary);
+}
+
+.light-mode-secondary-background button, .light-mode-primary-background .button {
+    background-color: var(--text-color-light-secondary);
+    color: var(--background-light-secondary);
+}
+
+header.light-mode-secondary-background h2, .light-mode-secondary-background h3 {
+    color: var(--text-color-light-secondary);
+}
+
+.light-mode-secondary-background .mysql {
+    filter: invert(8%) sepia(27%) saturate(1335%) hue-rotate(169deg) brightness(91%) contrast(96%);
 }

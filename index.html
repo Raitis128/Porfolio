@@ -20,7 +20,8 @@
     />
   </head>
   <body>
-    <nav class="navigation">
+    <!-- !NAVIGATION -->
+    <nav class="navigation" id="navigation">
       <span class="logo">&lt;Raitis Ižiks /&gt;</span>
       <ul class="links-container">
         <a href="#about"><li>About</li></a>
@@ -28,37 +29,59 @@
         <a href="#certifications"><li>Certifications</li></a>
         <a href="#projects"><li>Projects</li></a>
         <a href="#contact"><li>Contact me</li></a>
-        <a href=""
-          ><li><i class="fa-solid fa-moon"></i></li
-        ></a>
       </ul>
+      <div>
+        <button type="button" class="nav-btn" id="toggle">
+          <i class="fa-solid fa-moon" id="icon"></i>
+        </button>
+        <button type="button" class="nav-btn hidden" id="burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
 
     <main>
-      <header class="header">
+      <!-- !HEADER -->
+
+      <header class="header" id="header">
         <section class="container">
           <h1>I'm Raitis Ižiks</h1>
           <h2>Web developer</h2>
-          <form action="resume.pdf" method="get">
-            <button type="button">Resume</button>
-          </form>
-          <section class="icons">
-            <a href="https://www.linkedin.com/in/raitis128/" target="_blank"
-              ><i class="fa-brands fa-linkedin fa-4x"></i
-            ></a>
-            <a href="https://www.instagram.com/raitis128/" target="_blank"
-              ><i class="fa-brands fa-instagram fa-4x"></i
-            ></a>
-            <a href="https://github.com/Raitis128" target="_blank"
-              ><i class="fa-brands fa-github fa-4x"></i
-            ></a>
+          <img
+            src="img/Raitis-phone.png"
+            alt="Photo of person who made portfolio"
+            id="img3"
+          />
+          <section class="button-container">
+            <form action="resume.pdf" method="get">
+              <button type="button">Resume</button>
+            </form>
+            <section class="icons">
+              <a href="https://www.linkedin.com/in/raitis128/" target="_blank"
+                ><i class="fa-brands fa-linkedin fa-4x"></i
+              ></a>
+              <a href="https://www.instagram.com/raitis128/" target="_blank"
+                ><i class="fa-brands fa-instagram fa-4x"></i
+              ></a>
+              <a href="https://github.com/Raitis128" target="_blank"
+                ><i class="fa-brands fa-github fa-4x"></i
+              ></a>
+            </section>
           </section>
         </section>
         <img
           src="img/Raitis-desktop.png"
           alt="Photo of person who made portfolio"
+          id="img1"
+        />
+        <img
+          src="img/Raitis-tablet.png"
+          alt="Photo of person who made portfolio"
+          id="img2"
         />
       </header>
+
+      <!-- !ABOUT -->
 
       <article class="about" id="about">
         <h2>About me</h2>
@@ -72,6 +95,8 @@
           principles, and communication skills.
         </p>
       </article>
+
+      <!-- !SKILLS -->
 
       <section class="skills" id="skills">
         <section class="first-row">
@@ -133,10 +158,12 @@
         </section>
       </section>
 
+      <!-- !CERTIFICATIONS -->
+
       <section class="certifications" id="certifications">
         <h2>Certifications</h2>
         <img
-          src="img/icons/ffc.svg"
+          src="img/icons/ffc-dark.svg"
           alt="Logo of freecodecamp website"
           class="ffc-logo"
         />
@@ -149,9 +176,9 @@
           >
         </ul>
         <img
-          src="img/icons/meta.svg"
+          src="img/icons/meta-dark.svg"
           alt="Logo of meta brand"
-          class="certifications-logo"
+          class="certifications-logo meta"
         />
         <ul>
           <a href=""
@@ -159,9 +186,9 @@
           >
         </ul>
         <img
-          src="img/icons/codecademy.svg"
+          src="img/icons/codecademy-dark.svg"
           alt="Logo of codecademy website"
-          class="certifications-logo"
+          class="certifications-logo codecademy"
         />
         <ul>
           <a href=""><li>Learn JavaScript Course</li></a>
@@ -169,6 +196,8 @@
           <a href=""><li>Learn SQL Course</li></a>
         </ul>
       </section>
+
+      <!-- !PROJECTS -->
 
       <section class="projects" id="projects">
         <h2>Projects</h2>
@@ -190,10 +219,51 @@
               ><i class="fa-solid fa-arrow-up-right-from-square fa-4x"></i
             ></a>
           </section>
+
+          <section class="small">
+            <h3>Project title</h3>
+            <a href=""><i class="fa-brands fa-github fa-2x"></i></a>
+            <a href=""
+              ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
+            ></a>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's
+            </p>
+          </section>
+
           <img src="img/project.jpg" alt="Image of project" />
+
+          <section class="tools small">
+            <span>Tool1</span>
+            <span>Tool2</span>
+            <span>Tool3</span>
+            <span>Tool4</span>
+          </section>
         </section>
+
         <section class="project">
+          <section class="small">
+            <h3>Project title</h3>
+            <a href=""><i class="fa-brands fa-github fa-2x"></i></a>
+            <a href=""
+              ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
+            ></a>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's
+            </p>
+          </section>
+
           <img src="img/project.jpg" alt="Image of project" />
+
+          <section class="tools small">
+            <span>Tool1</span>
+            <span>Tool2</span>
+            <span>Tool3</span>
+            <span>Tool4</span>
+          </section>
+
           <section class="card second">
             <h3>Project title</h3>
             <section class="tools">
@@ -213,6 +283,8 @@
           </section>
         </section>
       </section>
+
+      <!-- !CONTACT -->
 
       <section class="contact" id="contact">
         <div>
@@ -236,7 +308,9 @@
       </section>
     </main>
 
-    <footer>
+    <!-- !FOOTER -->
+
+    <footer id="footer">
       <p>© 2024, Built with ❤️ by Raitis Ižiks</p>
     </footer>
 
@@ -244,5 +318,6 @@
       src="https://kit.fontawesome.com/f1e927aada.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
