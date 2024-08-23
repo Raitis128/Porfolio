@@ -71,12 +71,14 @@ burger.addEventListener("click", () => {
 
     hiddenNav.style.display = "block";
     navigation.classList.add("border");
+    navigationHeader.style.position = "fixed";
   } else {
     burgerIcon.classList.remove("fa-xmark");
     burgerIcon.classList.add("fa-bars");
 
     hiddenNav.style.display = "none";
     navigation.classList.remove("border");
+    navigationHeader.style.position = "static";
   }
 });
 
