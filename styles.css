@@ -126,8 +126,8 @@ a {
 .toggle label {
     display: block;
     position: relative;
-    width: 8rem;
-    height: 4rem;
+    width: 6rem;
+    height: 3rem;
     background-color: lightgray;
     border-radius: 20px;
     cursor: pointer;
@@ -138,8 +138,8 @@ a {
 }
 
 .toggle .circle {
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
     background-color: #fff;
     border-radius: 50%;
     top: .3rem;
@@ -163,13 +163,13 @@ a {
     }
 
     100% {
-        transform: translateX(4rem);
+        transform: translateX(3rem);
     }
 }
 
 @keyframes toggleOff {
     0% {
-        transform: translateX(4rem);
+        transform: translateX(3rem);
     }
 
     100% {
@@ -198,12 +198,13 @@ a {
 }
 
 .header img {
-    margin-left: 18rem;
+    margin-left: 15rem;
     height: 560px;
     width: 420px;
 }
 
 .container {
+    min-width: 36rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -411,13 +412,13 @@ a {
 
 .contact {
     background-color: var(--background-dark-secondary);
-    height: 38rem;
     text-align: center;
     color: var(--text-color-dark-primary);
+    padding-bottom: 8rem;
 }
 
 .contact div {
-    padding-top: 8.5rem;
+    padding-top: 8rem;
 }
 
 .contact p {
@@ -654,10 +655,6 @@ footer {
 
     /* !CONTACT */
 
-    .contact {
-        height: 33rem;
-    }
-
     .contact div {
         padding-top: 7rem;
     }
@@ -823,7 +820,7 @@ footer {
     .skills h3 {
         margin-top: 3rem;
     }
-    
+
     /* !PROJECTS */
 
     .projects h2 {
@@ -889,7 +886,7 @@ footer {
     /* !CONTACTS */
 
     .contact {
-        height: 28rem;
+        padding-bottom: 5rem;
     }
 
     .contact p {
@@ -903,7 +900,7 @@ footer {
     }
 
     .contact div {
-        padding-top: 6rem;
+        padding-top: 5rem;
     }
 
     .contact-icons {

@@ -18,7 +18,44 @@ const linkedinIcon = document.querySelectorAll(".linkedin");
 const githubIcon = document.querySelectorAll(".github");
 const linkIcon = document.querySelectorAll(".link");
 
+//! CAREERS
+const careersEl = document.getElementById("careers");
+
+const careers = [
+  "Web Developer",
+  "Fullstack Developer",
+  "Js Developer",
+  ".NET Developer",
+];
+
+let careerIndex = 0;
+let characterIndex = 0;
+
+const updateText = () => {
+  careersEl.innerText = `
+      I am a ${careers[careerIndex].slice(0, characterIndex)}
+    `;
+  characterIndex++;
+  if (characterIndex === careers[careerIndex].length + 1) {
+    careerIndex++;
+    characterIndex = 0;
+  }
+  if (careerIndex === careers.length) {
+    careerIndex = 0;
+  }
+  setTimeout(updateText, 300);
+};
+
+updateText();
+
 //! LOCAL STORAGE
+const updateLocalStorage = () => {
+  localStorage.setItem("mode", JSON.stringify(inputEl.checked));
+};
+
+inputEl.checked = JSON.parse(localStorage.getItem("mode")) || false;
+
+//!  TOGGLE EVENT LISTENERS
 
 const updateTheme = () => {
   if (inputEl.checked) {
@@ -42,14 +79,7 @@ const updateTheme = () => {
   }
 };
 
-const updateLocalStorage = () => {
-  localStorage.setItem("mode", JSON.stringify(inputEl.checked));
-};
-
-inputEl.checked = JSON.parse(localStorage.getItem("mode")) || false;
 updateTheme();
-
-//!  TOGGLE EVENT LISTENERS
 
 inputEl.addEventListener("input", () => {
   updateTheme();
