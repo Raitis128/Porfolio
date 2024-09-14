@@ -427,7 +427,7 @@ a {
     margin: 0 auto;
 }
 
-.button {
+.contact button {
     padding: 2rem 5.7rem;
     font-size: 2.4rem;
     border-radius: 5rem;
@@ -437,7 +437,7 @@ a {
     border: 0;
 }
 
-.button:hover {
+.contact button:hover {
     -webkit-box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 1);
     box-shadow: 0px 0px 31px 2px rgba(0, 0, 0, 1);
@@ -589,39 +589,6 @@ footer {
         padding-bottom: 5rem;
     }
 
-    /* !CERTIFICATIONS */
-
-    .certifications {
-        height: 62rem;
-    }
-
-    .certifications h2 {
-        font-size: 2.4rem;
-        padding-top: 4rem;
-    }
-
-    .certifications ul {
-        margin-top: 3rem;
-    }
-
-    .certifications li {
-        padding-bottom: 2rem;
-        font-size: 2rem;
-    }
-
-    .ffc-logo {
-        padding-top: 4rem;
-        width: 27rem;
-    }
-
-    .meta {
-        width: 15rem;
-    }
-
-    .codecademy {
-        width: 14rem;
-    }
-
     /* !PROJECTS */
 
     .projects h2 {
@@ -708,7 +675,7 @@ footer {
         font-size: 3.5rem;
     }
 
-    .button {
+    .contact button {
         padding: 2rem 5rem;
     }
 
@@ -856,42 +823,7 @@ footer {
     .skills h3 {
         margin-top: 3rem;
     }
-
-    /* !CERTIFICATIONS */
-
-    .certifications {
-        text-align: left;
-        padding-left: 2rem;
-        height: 42.8rem;
-        padding-right: 2rem;
-    }
-
-    .certifications h2 {
-        font-size: 2.2rem;
-    }
-
-    .certifications li {
-        font-size: 1.4rem;
-        padding-bottom: 1rem;
-    }
-
-    .certifications ul {
-        margin-top: 2rem;
-    }
-
-    .ffc-logo {
-        padding-top: 2rem;
-        width: 15.7rem;
-    }
-
-    .meta {
-        width: 7.7rem;
-    }
-
-    .codecademy {
-        width: 8.6rem;
-    }
-
+    
     /* !PROJECTS */
 
     .projects h2 {
@@ -922,7 +854,7 @@ footer {
         color: var(--text-color-dark-secondary);
         font-size: 1.8rem;
         display: inline-block;
-        padding-bottom: 1rem;
+        margin-bottom: 1rem;
         margin-left: 2rem;
     }
 
@@ -965,7 +897,7 @@ footer {
         width: auto;
     }
 
-    .button {
+    .contact button {
         padding: 1.3rem 3.5rem;
         font-size: 1.6rem;
     }
@@ -1072,12 +1004,12 @@ footer {
     background-color: var(--background-light-secondary);
 }
 
-.light-mode-secondary-background button, .light-mode-primary-background .button {
+.light-mode-secondary-background button {
     background-color: var(--text-color-light-secondary);
     color: var(--background-light-secondary);
 }
 
-header.light-mode-secondary-background h2, .light-mode-secondary-background h3 {
+header.light-mode-secondary-background h2, .light-mode-primary-background h3, .light-mode-secondary-background h3 {
     color: var(--text-color-light-secondary);
 }
 
