@@ -110,6 +110,74 @@ a {
     display: none;
 }
 
+.btns {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+/* ! TOGGLE */
+
+.toggle {
+    padding-right: 40px;
+    transition: .4s;
+}
+
+.toggle label {
+    display: block;
+    position: relative;
+    width: 8rem;
+    height: 4rem;
+    background-color: lightgray;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.toggle .input {
+    display: none;
+}
+
+.toggle .circle {
+    width: 3.4rem;
+    height: 3.4rem;
+    background-color: #fff;
+    border-radius: 50%;
+    top: .3rem;
+    position: absolute;
+    left: .3rem;
+    animation: toggleOff 0.4s linear forwards;
+}
+
+.toggle .input:checked+.label {
+    background-color: white;
+}
+
+.toggle .input:checked+.label .circle {
+    animation: toggleOn 0.4s linear forwards;
+    background-color: #000;
+}
+
+@keyframes toggleOn {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(4rem);
+    }
+}
+
+@keyframes toggleOff {
+    0% {
+        transform: translateX(4rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
 /* !HEADER */
 
 #img2 {
@@ -935,6 +1003,43 @@ footer {
     .nav-btn:first-of-type {
         margin-right: 3rem;
     }
+
+    .toggle {
+        padding-right: 3rem;
+    }
+
+    .toggle label {
+        width: 5rem;
+        height: 2.5rem;
+    }
+
+    .toggle .circle {
+        width: 2.2rem;
+        height: 2.2rem;
+        top: .15rem;
+        left: .15rem;
+    }
+
+    @keyframes toggleOn {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(2.5rem);
+        }
+    }
+
+    @keyframes toggleOff {
+        0% {
+            transform: translateX(2.5rem);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
 }
 
 @media only screen and (max-width: 320px) {
