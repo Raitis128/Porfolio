@@ -305,6 +305,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 8rem;
 }
 
@@ -910,7 +911,6 @@ footer {
     .web {
         margin-left: 2rem;
         margin-right: 2rem;
-        justify-content: left;
     }
 
     .project img {
