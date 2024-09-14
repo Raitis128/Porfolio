@@ -30,6 +30,11 @@ html {
 
 /* !NAVIGATION */
 
+#burgerIcon {
+    display: none;
+}
+
+
 #navigationHeader {
     width: 100%;
     z-index: 1;
@@ -253,43 +258,6 @@ a {
     margin-top: 8rem;
 }
 
-/* !CERTIFICATIONS */
-
-.certifications {
-    height: 90rem;
-    text-align: center;
-    background-color: var(--background-dark-primary);
-}
-
-.certifications h2 {
-    color: var(--text-color-dark-primary);
-    font-size: 3.2rem;
-    padding-top: 8rem;
-}
-
-.certifications ul {
-    margin-top: 4rem;
-    list-style-position: inside;
-}
-
-.certifications li {
-    font-size: 2.6rem;
-    color: var(--text-color-dark-primary);
-    padding-bottom: 3rem;
-}
-
-.certifications a {
-    display: inline-block;
-}
-
-.certifications-logo {
-    padding-top: 2rem;
-}
-
-.ffc-logo {
-    padding-top: 5rem;
-}
-
 /* !PROJECTS */
 
 .small {
@@ -297,7 +265,7 @@ a {
 }
 
 .projects {
-    background-color: var(--background-dark-secondary);
+    background-color: var(--background-dark-primary);
     color: var(--text-color-dark-primary);
 }
 
@@ -321,7 +289,7 @@ a {
 }
 
 .card {
-    background-color: var(--background-dark-primary);
+    background-color: var(--background-dark-secondary);
     opacity: 0.95;
     border-radius: 1rem;
     height: 35rem;
@@ -374,7 +342,7 @@ a {
 /* !CONTACT */
 
 .contact {
-    background-color: var(--background-dark-primary);
+    background-color: var(--background-dark-secondary);
     height: 38rem;
     text-align: center;
     color: var(--text-color-dark-primary);
@@ -422,7 +390,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--background-dark-secondary);
+    background-color: var(--background-dark-primary);
     color: var(--text-color-dark-primary);
     font-size: 2rem;
     font-weight: bold;
@@ -684,6 +652,10 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
+    #burgerIcon {
+        display: block;
+    }
+
     .first {
         left: 20%;
     }
@@ -940,13 +912,9 @@ footer {
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 450px) {
     .about {
         height: 40rem;
-    }
-
-    .certifications {
-        height: 45rem;
     }
 
     .web {
@@ -978,19 +946,14 @@ footer {
         height: 43rem;
     }
 
-    .certifications {
-        height: 47rem;
-    }
-
     .contact-icons {
         width: 100%;
     }
 }
 
-
 /* !LIGHT MODE */
 
-.light-mode-primary-background, .light-mode-secondary-background .card, .light-mode-primary-background a {
+.light-mode-primary-background {
     background-color: var(--background-light-primary);
 }
 
@@ -1000,7 +963,7 @@ footer {
     color: var(--text-color-light-primary);
 }
 
-.light-mode-secondary-background {
+.light-mode-secondary-background, .light-mode-primary-background .card {
     background-color: var(--background-light-secondary);
 }
 
