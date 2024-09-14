@@ -147,3 +147,19 @@ linkIcon.forEach((link) => {
     link.classList.remove("fa-bounce");
   });
 });
+
+//! SKILLS ANIMATION
+
+const imageEls = document.querySelectorAll(".image-container");
+
+imageEls.forEach((imageEl) => {
+  imageEl.addEventListener("mouseover", () => {
+    imageEl.classList.add("animate__flip");
+    imageEl.classList.add("animate__animated");
+  });
+
+  imageEl.addEventListener("mouseout", () => {
+    imageEl.classList.remove("animate__flip");
+    imageEl.classList.remove("animate__animated");
+  });
+});

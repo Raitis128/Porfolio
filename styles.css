@@ -198,13 +198,13 @@ a {
 }
 
 .header img {
-    margin-left: 15rem;
+    margin-left: 18rem;
     height: 560px;
     width: 420px;
 }
 
 .container {
-    min-width: 36rem;
+    min-width: 41rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,61 +270,46 @@ a {
 /* !SKILLS */
 
 .skills {
-
     background-color: var(--background-dark-secondary);
+    padding: 8rem 2rem;
+    overflow: hidden;
+
 }
 
-.first-row {
+.skills-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.image-container {
+    border: .5rem solid var(--background-light-primary);
+    padding: 3.5rem;
+    border-radius: 50%;
 }
 
 .skills h2 {
     color: var(--text-color-dark-primary);
     font-size: 3.2rem;
-    margin-top: 8rem;
-}
-
-.skills h3 {
-    color: var(--text-color-dark-secondary);
-    font-size: 2.6rem;
-    margin-top: 3rem;
+    margin-bottom: 5rem;
 }
 
 .skills img {
-    width: 18rem;
-    height: 18rem;
+    width: 12rem;
+    height: 12rem;
 }
 
 .web {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 9rem;
-    margin: 8rem 7rem 4rem 7rem;
+    gap: 8rem;
 }
 
 .mysql {
     filter: invert(99%) sepia(0%) saturate(447%) hue-rotate(171deg) brightness(95%) contrast(86%);
-}
-
-.second-row {
-    display: flex;
-    padding-bottom: 10rem;
-}
-
-.other {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.other-icons {
-    display: flex;
-    gap: 8rem;
-    margin-top: 8rem;
 }
 
 /* !PROJECTS */
@@ -522,6 +507,10 @@ footer {
 
     .header {
         height: 40rem;
+    }
+
+    .header img {
+        margin-left: 0;
     }
 
     .container h1 {
@@ -731,6 +720,10 @@ footer {
         width: 16.5rem;
         height: 18rem;
         margin-left: 0;
+    }
+
+    .container {
+        min-width: auto;
     }
 
     .container h1 {
@@ -1012,4 +1005,8 @@ header.light-mode-secondary-background h2, .light-mode-primary-background h3, .l
 
 .light-mode-secondary-background .mysql {
     filter: invert(8%) sepia(27%) saturate(1335%) hue-rotate(169deg) brightness(91%) contrast(96%);
+}
+
+.light-mode-secondary-background .image-container {
+    border-color: var(--background-dark-secondary);
 }
