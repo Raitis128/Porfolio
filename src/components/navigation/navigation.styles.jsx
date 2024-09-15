@@ -25,11 +25,15 @@ export const Nav = styled.nav`
     margin-left: 7rem;
 
     @media only screen and (max-width: 1440px) {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
 
     @media only screen and (max-width: 1024px) {
       font-size: 2.4rem;
+    }
+
+    @media only screen and (max-width: 760px) {
+      margin-left: 3rem;
     }
   }
 `;
@@ -44,7 +48,8 @@ export const LinksContainer = styled.ul`
     font-size: 3.2rem;
 
     @media only screen and (max-width: 1440px) {
-      font-size: 2.2rem;
+      font-size: 2rem;
+      padding-left: 3rem;
     }
   }
 

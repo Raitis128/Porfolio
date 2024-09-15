@@ -24,6 +24,10 @@ export const BurgerButton = styled.button`
       display: inline;
     }
   }
+
+  @media only screen and (max-width: 760px) {
+    margin-right: 3rem;
+  }
 `;
 
 export const ToggleButton = styled.div`
