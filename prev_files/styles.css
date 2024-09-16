@@ -1,27 +1,3 @@
-
-
-/* !ABOUT ME */
-
-.about {
-    display: flex;
-    flex-direction: column;
-    color: var(--text-color-dark-primary);
-    background-color: var(--background-dark-primary);
-    height: 40rem;
-    align-items: center;
-}
-
-.about h2 {
-    font-size: 3.2rem;
-    margin-top: 8rem;
-}
-
-.about p {
-    font-size: 2.6rem;
-    margin-top: 5rem;
-    margin: 5rem 18rem 8rem 18rem;
-}
-
 /* !SKILLS */
 
 .skills {
@@ -223,28 +199,9 @@ footer {
         right: 5%;
     }
 
-    .about p {
-        font-size: 2.3rem;
-    }
 }
 
 @media only screen and (max-width: 1024px) {
-
-    
-    /* !ABOUT  */
-    .about {
-        height: 27rem;
-    }
-
-    .about p {
-        font-size: 2rem;
-        margin: 2rem 7rem 4rem;
-    }
-
-    .about h2 {
-        font-size: 2.4rem;
-        margin-top: 4rem;
-    }
 
     /* !SKILLS  */
 
@@ -374,26 +331,10 @@ footer {
         left: 20%;
     }
 
-    .about p {
-        font-size: 1.8rem;
-    }
+    
 }
 
 @media only screen and (max-width: 760px) {
-    /* !ABOUT */
-
-    .about {
-        height: 35.7rem;
-        align-items: flex-start;
-    }
-
-    .about h2 {
-        margin-left: 2rem;
-    }
-
-    .about p {
-        margin: 2rem 2rem 4rem 2rem;
-    }
 
     /* !SKILLS */
 
@@ -523,9 +464,6 @@ footer {
 }
 
 @media only screen and (max-width: 450px) {
-    .about {
-        height: 40rem;
-    }
 
     .web {
         margin-left: 2rem;
@@ -586,10 +524,6 @@ footer {
 @media only screen and (max-width: 320px) {
     .logo {
         font-size: 1.8rem;
-    }
-
-    .about {
-        height: 43rem;
     }
 
     .contact-icons {
