@@ -1,80 +1,3 @@
-/* !PROJECTS */
-
-.small {
-    display: none;
-}
-
-.projects {
-    background-color: var(--background-dark-primary);
-    color: var(--text-color-dark-primary);
-}
-
-
-
-.project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 8rem;
-    position: relative;
-}
-
-.project img {
-    width: 56rem;
-    height: 49rem;
-}
-
-.card {
-    background-color: var(--background-dark-secondary);
-    opacity: 0.95;
-    border-radius: 1rem;
-    height: 35rem;
-    width: 60rem;
-}
-
-.card h3 {
-    color: var(--text-color-dark-secondary);
-    font-size: 2.6rem;
-    margin: 5rem 0 3rem 4rem;
-}
-
-.card span {
-    font-size: 2rem;
-}
-
-.card p {
-    font-size: 1.8rem;
-    margin: 0 6.5rem 4rem 4rem;
-}
-
-.card i {
-    padding-left: 4rem;
-}
-
-.tools {
-    margin: 0 0 3rem 4rem;
-}
-
-.tools span {
-    margin-right: 3rem;
-}
-
-.first {
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    transform: translate(-30%, -30%);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.second {
-    position: absolute;
-    top: 30%;
-    right: 22%;
-    transform: translateY(-30%);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-}
-
 /* !CONTACT */
 
 .contact {
@@ -157,68 +80,7 @@ footer {
 
 @media only screen and (max-width: 1024px) {
 
-    /* !PROJECTS */
-
-    .projects h2 {
-        font-size: 2.4rem;
-        padding: 4rem 0 5rem;
-    }
-
-    .project {
-        padding-bottom: 5rem;
-    }
-
-    .first {
-        left: 18%;
-    }
-
-    .second {
-        right: 5%;
-    }
-
-    .project img {
-        width: 39rem;
-        height: 33rem;
-    }
-
-    .card {
-        width: 42rem;
-        height: 24rem;
-    }
-
-    .card h3 {
-        font-size: 2rem;
-        margin: 4rem 0 2rem 3.5rem;
-    }
-
-    .tools {
-        margin: 0 0 2.5rem 3.5rem;
-    }
-
-    .card span {
-        font-size: 1.4rem;
-    }
-
-    .card p {
-        font-size: 1.2rem;
-        margin: 0 0 3rem 3.5rem;
-    }
-
-    .card .fa-4x {
-        font-size: 2rem !important;
-    }
-
-    .card a:first-of-type {
-        padding-left: 3.5rem;
-    }
-
-    .card a:last-of-type {
-        padding-left: 1.5rem;
-    }
-
-    .card i {
-        padding: 0;
-    }
+    
 
     /* !CONTACT */
 
@@ -263,67 +125,7 @@ footer {
 }
 
 @media only screen and (max-width: 760px) {
-    /* !PROJECTS */
-
-    .projects h2 {
-        text-align: left;
-        margin-left: 2rem;
-        padding-bottom: 2rem;
-    }
-
-    .project img {
-        width: 35rem;
-        height: 16.4rem;
-    }
-
-    .card {
-        display: none;
-    }
-
-    .small {
-        display: inline;
-    }
-
-    .project {
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .project h3 {
-        color: var(--text-color-dark-secondary);
-        font-size: 1.8rem;
-        display: inline-block;
-        margin-bottom: 1rem;
-        margin-left: 2rem;
-    }
-
-    .project a {
-        padding-left: 2rem;
-    }
-
-    .project p {
-        margin-right: 2rem;
-        margin-bottom: 2rem;
-        margin-left: 2rem;
-        font-size: 1.3rem;
-    }
-
-    .project img, .tools {
-        margin: 0 auto;
-    }
-
-    .tools {
-        margin-top: 1rem;
-    }
-
-    .tools span {
-        margin-right: 6rem;
-        font-size: 1.4rem;
-    }
-
-    .tools span:last-of-type {
-        margin-right: 0;
-    }
+    
 
     /* !CONTACTS */
 
@@ -353,19 +155,7 @@ footer {
 
 @media only screen and (max-width: 450px) {
 
-    .web {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    .project img {
-        width: 30rem;
-        height: 14.4rem;
-    }
-
-    .tools span {
-        margin-right: 4rem;
-    }
+    
 
     .nav-btn:first-of-type {
         margin-right: 3rem;
