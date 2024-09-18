@@ -8,6 +8,10 @@ export const HeaderComponent = styled.header`
   justify-content: center;
   align-items: center;
 
+  #img1 {
+    margin-left: 18rem;
+  }
+
   #img2,
   #img3 {
     display: none;

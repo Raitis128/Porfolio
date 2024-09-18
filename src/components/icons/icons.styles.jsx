@@ -19,6 +19,8 @@ export const IconsSection = styled.section`
   }
 
   @media only screen and (max-width: 760px) {
+    min-width: auto;
+
     a {
       margin-right: 3rem;
     }

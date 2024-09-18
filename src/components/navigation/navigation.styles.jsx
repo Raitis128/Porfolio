@@ -12,6 +12,7 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--text-color-dark-primary);
 
   ul {
     @media only screen and (max-width: 1024px) {
