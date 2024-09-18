@@ -1,25 +1,13 @@
 import { HiddenNav } from "./hidden-navigation-styles";
+import PropTypes from "prop-types";
 
-const HiddenNavigation = () => {
-  return (
-    <HiddenNav>
-      <a href="#about">
-        <li>About</li>
-      </a>
-      <a href="#skills">
-        <li>Skills</li>
-      </a>
-      <a href="#certifications">
-        <li>Certifications</li>
-      </a>
-      <a href="#projects">
-        <li>Projects</li>
-      </a>
-      <a href="#contact">
-        <li>Contact me</li>
-      </a>
-    </HiddenNav>
-  );
+const HiddenNavigation = (props) => {
+  return <HiddenNav>{props.addLinks(props.links)}</HiddenNav>;
+};
+
+HiddenNavigation.propTypes = {
+  addLinks: PropTypes.func.isRequired,
+  links: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default HiddenNavigation;
