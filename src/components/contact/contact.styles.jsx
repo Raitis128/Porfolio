@@ -7,7 +7,7 @@ export const ContactSection = styled.section`
   padding: 8rem 0;
 
   h2 {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
   }
 
   p {
@@ -56,6 +56,10 @@ export const ContactSection = styled.section`
 
   @media only screen and (max-width: 1024px) {
     padding: 7rem 0;
+
+    h2 {
+      font-size: 2.4rem;
+    }
 
     .fa-4x {
       font-size: 3.5rem;
