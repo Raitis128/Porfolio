@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { SkillsSection, ImagesSection, ImageContainer } from "./skills.styles";
+
 import HTMLIcon from "../../assets/img/skills/html.png";
 import CSSIcon from "../../assets/img/skills/css-3.png";
 import JSIcon from "../../assets/img/skills/js.png";
@@ -28,12 +30,24 @@ const Skills = () => {
     { src: NetlifyIcon, alt: "Icon of netlify" },
   ];
 
+  const [filter, setFilter] = useState(
+    "invert(96%) sepia(10%) saturate(0%) hue-rotate(187deg) brightness(97%) contrast(88%)"
+  );
+
   const addIcons = (icons) => {
-    return icons.map((icon, index) => (
-      <ImageContainer key={index}>
-        <img src={icon.src} alt={icon.alt} />
-      </ImageContainer>
-    ));
+    return icons.map((icon, index) => {
+      return (
+        <ImageContainer key={index}>
+          <img
+            src={icon.src}
+            alt={icon.alt}
+            style={{
+              filter: icon.src === MySQLIcon ? filter : "none",
+            }}
+          />
+        </ImageContainer>
+      );
+    });
   };
 
   return (
