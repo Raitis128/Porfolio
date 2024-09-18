@@ -31,7 +31,7 @@ export const BurgerButton = styled.button`
 `;
 
 export const ToggleButton = styled.div`
-  padding-right: 40px;
+  padding-right: 4rem;
   transition: 0.4s;
 
   label {
@@ -85,6 +85,42 @@ export const ToggleButton = styled.div`
 
     100% {
       transform: translateX(0);
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    padding-right: 3rem;
+
+    label {
+      width: 5rem;
+      height: 2.5rem;
+    }
+
+    .circle {
+      width: 2.2rem;
+      height: 2.2rem;
+      top: 0.15rem;
+      left: 0.15rem;
+    }
+
+    @keyframes toggleOn {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(2.5rem);
+      }
+    }
+
+    @keyframes toggleOff {
+      0% {
+        transform: translateX(2.5rem);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
     }
   }
 `;

@@ -35,6 +35,10 @@ export const Nav = styled.nav`
     @media only screen and (max-width: 760px) {
       margin-left: 3rem;
     }
+
+    @media only screen and (max-width: 375px) {
+      font-size: 1.8rem;
+    }
   }
 `;
 

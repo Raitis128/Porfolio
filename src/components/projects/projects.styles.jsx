@@ -31,6 +31,10 @@ export const Project = styled.section`
   gap: 5rem;
   margin-bottom: 5rem;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   img {
     width: 56rem;
     height: 49rem;
