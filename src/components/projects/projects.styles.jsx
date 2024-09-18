@@ -11,12 +11,16 @@ export const ProjectsSection = styled.section`
   }
 
   @media only screen and (max-width: 1024px) {
-    padding: 5rem 0;
+    padding: 5rem 5rem;
 
     h2 {
       font-size: 2.4rem;
       margin-bottom: 5rem;
     }
+  }
+
+  @media only screen and (max-width: 425px) {
+    padding: 5rem 0;
   }
 `;
 
@@ -62,6 +66,10 @@ export const Project = styled.section`
   }
 
   @media only screen and (max-width: 425px) {
+    img {
+      min-height: 30rem;
+    }
+
     img:nth-child(odd),
     img:nth-child(even) {
       border-radius: 0;
@@ -92,6 +100,7 @@ export const Card = styled.section`
   p {
     font-size: 1.8rem;
     margin-bottom: 4rem;
+    text-align: center;
   }
 
   i {
@@ -144,8 +153,8 @@ export const Card = styled.section`
     }
 
     nav {
-        display: flex;
-        justify-content: center;
+      display: flex;
+      justify-content: center;
     }
   }
 
