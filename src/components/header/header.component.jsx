@@ -1,7 +1,10 @@
-import { HeaderComponent, Icons, Container, ButtonContainer } from "./header.styles";
+import { HeaderComponent, Container, ButtonContainer } from "./header.styles";
+
 import DesktopImage from "../../assets/img/Raitis-desktop.png";
 import PhoneImage from "../../assets/img/Raitis-phone.png";
 import TabletImage from "../../assets/img/Raitis-tablet.png";
+
+import Icons from "../icons/icons.component";
 
 const Header = () => {
   return (
@@ -18,17 +21,7 @@ const Header = () => {
           <form action="resume.pdf" method="get">
             <button type="button">Resume</button>
           </form>
-          <Icons>
-            <a href="https://www.linkedin.com/in/raitis128/" target="_blank">
-              <i className="fa-brands fa-linkedin fa-4x linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/raitis128/" target="_blank">
-              <i className="fa-brands fa-instagram fa-4x instagram"></i>
-            </a>
-            <a href="https://github.com/Raitis128" target="_blank">
-              <i className="fa-brands fa-github fa-4x github"></i>
-            </a>
-          </Icons>
+          <Icons />
         </ButtonContainer>
       </Container>
       <img

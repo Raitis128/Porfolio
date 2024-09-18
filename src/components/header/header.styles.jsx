@@ -30,7 +30,7 @@ export const HeaderComponent = styled.header`
     }
   }
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 768px) {
     height: 40.6rem;
     align-items: normal;
 
@@ -104,7 +104,7 @@ export const Container = styled.section`
       font-size: 3.5rem;
     }
 
-    @media only screen and (max-width: 760px) {
+    @media only screen and (max-width: 768px) {
       min-width: auto;
 
       h1 {
@@ -127,28 +127,19 @@ export const Container = styled.section`
   }
 `;
 
-export const Icons = styled.section`
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-
-  @media only screen and (max-width: 760px) {
-    a {
-      margin-right: 3rem;
-    }
-
-    a:last-of-type {
-      margin-right: 0;
-    }
-  }
-`;
-
 export const ButtonContainer = styled.section`
-  @media only screen and (max-width: 760px) {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: row;
     padding-top: 3.7rem;
 
     form {
+      display: flex;
+      align-items: center;
       margin-right: 3rem;
     }
   }

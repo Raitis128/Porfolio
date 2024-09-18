@@ -1,4 +1,6 @@
-import { ContactSection, ContactIcons } from "./contact.styles";
+import { ContactSection } from "./contact.styles";
+
+import Icons from "../icons/icons.component";
 
 const Contact = () => {
   return (
@@ -11,17 +13,7 @@ const Contact = () => {
         My inbox is always open - so if you want to work together on something
         don&apos;t be afraid to say hi.
       </p>
-      <ContactIcons>
-        <a href="https://www.linkedin.com/in/raitis128/" target="_blank">
-          <i className="fa-brands fa-linkedin fa-4x linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/raitis128/" target="_blank">
-          <i className="fa-brands fa-instagram fa-4x instagram"></i>
-        </a>
-        <a href="https://github.com/Raitis128" target="_blank">
-          <i className="fa-brands fa-github fa-4x github"></i>
-        </a>
-      </ContactIcons>
+      <Icons />
     </ContactSection>
   );
 };
