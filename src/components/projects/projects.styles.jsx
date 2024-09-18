@@ -104,7 +104,6 @@ export const Card = styled.section`
   p {
     font-size: 1.8rem;
     margin-bottom: 4rem;
-    text-align: center;
   }
 
   i {

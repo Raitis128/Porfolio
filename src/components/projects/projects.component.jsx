@@ -11,7 +11,7 @@ const projects = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s",
     github: "",
     link: "",
-    image: { ProjectImage },
+    image: ProjectImage,
     imageAlt: "Image of project",
   },
   {
@@ -21,7 +21,7 @@ const projects = [
       "This project is a Pokémon search application that allows users to search for details about a Pokémon by its name or ID.",
     github: "https://github.com/Raitis128/Pokemon-Search-App",
     link: "https://iziks-pokemon-app.netlify.app/",
-    image: { PokemonImage },
+    image: PokemonImage,
     imageAlt: "Image of project Pokémon Search App",
   },
 ];
@@ -30,59 +30,40 @@ const Projects = () => {
   return (
     <ProjectsSection id="projects">
       <h2>Projects</h2>
-      <Project>
-        <Card className="first">
-          <h3>Pokémon Search App</h3>
-          <Tools>
-            <span>CSS</span>
-            <span>Javascript</span>
-            <span>API</span>
-            <span>Async</span>
-          </Tools>
-          <p>
-            This project is a Pokémon search application that allows users to
-            search for details about a Pokémon by its name or ID.
-          </p>
-          <nav>
-            <a
-              href="https://github.com/Raitis128/Pokemon-Search-App"
-              target="_blank"
-            >
-              <i className="fa-brands fa-github fa-4x github"></i>
-            </a>
-            <a href="https://iziks-pokemon-app.netlify.app/" target="_blank">
-              <i className="fa-solid fa-arrow-up-right-from-square fa-4x link"></i>
-            </a>
-          </nav>
-        </Card>
+      {projects
+        .slice()
+        .reverse()
+        .map((project, index) => {
+          return (
+            <Project key={index}>
+              {index % 2 === 0 ? (
+                <img src={project.image} alt={project.imageAlt} />
+              ) : null}
 
-        <img src={PokemonImage} alt="Image of project" />
-      </Project>
+              <Card>
+                <h3>{project.title}</h3>
+                <Tools>
+                  {project.tools.map((tool, index) => {
+                    return <span key={index}>{tool}</span>;
+                  })}
+                </Tools>
+                <p>{project.description}</p>
+                <nav>
+                  <a href={project.github} target="_blank">
+                    <i className="fa-brands fa-github fa-4x github"></i>
+                  </a>
+                  <a href={project.link} target="_blank">
+                    <i className="fa-solid fa-arrow-up-right-from-square fa-4x link"></i>
+                  </a>
+                </nav>
+              </Card>
 
-      <Project>
-        <img src={ProjectImage} alt="Image of project" />
-        <Card className="second">
-          <h3>Project title</h3>
-          <Tools>
-            <span>Tool1</span>
-            <span>Tool2</span>
-            <span>Tool3</span>
-            <span>Tool4</span>
-          </Tools>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s
-          </p>
-          <nav>
-            <a href="">
-              <i className="fa-brands fa-github fa-4x github"></i>
-            </a>
-            <a href="">
-              <i className="fa-solid fa-arrow-up-right-from-square fa-4x link"></i>
-            </a>
-          </nav>
-        </Card>
-      </Project>
+              {index % 2 === 0 ? null : (
+                <img src={project.image} alt={project.imageAlt} />
+              )}
+            </Project>
+          );
+        })}
     </ProjectsSection>
   );
 };
