@@ -13,47 +13,33 @@ import FigmaIcon from "../../assets/img/skills/figma.png";
 import NetlifyIcon from "../../assets/img/skills/netlify.png";
 
 const Skills = () => {
+  const icons = [
+    { src: HTMLIcon, alt: "Icon of html language" },
+    { src: CSSIcon, alt: "Icon of css language" },
+    { src: JSIcon, alt: "Icon of javascript programming language" },
+    { src: TSIcon, alt: "Icon of typescript programming language" },
+    { src: GitIcon, alt: "Icon of version control git" },
+    { src: SassIcon, alt: "Icon of scripting language sass" },
+    { src: ReactIcon, alt: "Icon of javascript library react" },
+    { src: BootstrapIcon, alt: "Icon of javascript library bootstrap" },
+    { src: MySQLIcon, alt: "Icon of database mysql" },
+    { src: FirebaseIcon, alt: "Icon of firebase" },
+    { src: FigmaIcon, alt: "Icon of figma" },
+    { src: NetlifyIcon, alt: "Icon of netlify" },
+  ];
+
+  const addIcons = (icons) => {
+    return icons.map((icon, index) => (
+      <ImageContainer key={index}>
+        <img src={icon.src} alt={icon.alt} />
+      </ImageContainer>
+    ));
+  };
+
   return (
     <SkillsSection id="skills">
       <h2>Skills</h2>
-      <ImagesSection>
-        <ImageContainer>
-          <img src={HTMLIcon} alt="Icon of html language" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={CSSIcon} alt="Icon of css language" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={JSIcon} alt="Icon of javascript programming language" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={TSIcon} alt="Icon of typescript programming language" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={GitIcon} alt="Icon of version control git" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={SassIcon} alt="Icon of scripting language sass" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={ReactIcon} alt="Icon of javascript library react" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={BootstrapIcon} alt="Icon of css framework bootstrap" />
-        </ImageContainer>
-        <ImageContainer>
-          <img className="mysql" src={MySQLIcon} alt="Icon of mysql database" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={FirebaseIcon} alt="Icon of firebase database" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={FigmaIcon} alt="Icon of design tool figma" />
-        </ImageContainer>
-        <ImageContainer>
-          <img src={NetlifyIcon} alt="Icon of deployment platform netlify" />
-        </ImageContainer>
-      </ImagesSection>
+      <ImagesSection>{addIcons(icons)}</ImagesSection>
     </SkillsSection>
   );
 };
