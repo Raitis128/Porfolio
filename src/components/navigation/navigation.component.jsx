@@ -19,17 +19,33 @@ const Navigation = () => {
   const [position, setPosition] = useState("static");
 
   useEffect(() => {
-    const burger = document.getElementById("burger");
+    const burgerEl = document.getElementById("burger");
+    const burgerIconEl = document.getElementById("burgerIcon");
 
     const addHiddenNavigation = () => {
       display === "none" ? setDisplay("block") : setDisplay("none");
       position === "static" ? setPosition("fixed") : setPosition("static");
     };
 
-    burger.addEventListener("click", addHiddenNavigation);
+    const changeBurgerToCloseBtn = () => {
+      if (burgerIconEl.classList.contains("fa-bars")) {
+        burgerIconEl.classList.remove("fa-bars");
+        burgerIconEl.classList.add("fa-xmark");
+      } else {
+        burgerIconEl.classList.remove("fa-xmark");
+        burgerIconEl.classList.add("fa-bars");
+      }
+    };
+
+    const handleBurgerClick = () => {
+      addHiddenNavigation();
+      changeBurgerToCloseBtn();
+    };
+
+    burgerEl.addEventListener("click", handleBurgerClick);
 
     return () => {
-      burger.removeEventListener("click", addHiddenNavigation);
+      burgerEl.removeEventListener("click", handleBurgerClick);
     };
   }, [display, position]);
 
