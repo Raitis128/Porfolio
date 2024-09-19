@@ -60,10 +60,10 @@ const Projects = () => {
                 <p>{project.description}</p>
                 <nav>
                   <a href={project.github} target="_blank">
-                    <i className="fa-brands fa-github fa-4x github"></i>
+                    <i className="icon fa-brands fa-github fa-4x github"></i>
                   </a>
                   <a href={project.link} target="_blank">
-                    <i className="fa-solid fa-arrow-up-right-from-square fa-4x link"></i>
+                    <i className="icon fa-solid fa-arrow-up-right-from-square fa-4x link"></i>
                   </a>
                 </nav>
               </Card>
