@@ -87,8 +87,14 @@ export const Card = styled.section`
   border-radius: 1rem;
   min-height: 35rem;
   max-width: 60rem;
-  box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 15px 0px rgb(0, 0, 0);
   padding: 5rem 4rem;
+
+  &:hover {
+    -webkit-box-shadow: 0px 0px 15px 0px var(--background-light-primary);
+    -moz-box-shadow: 0px 0px 15px 0px var(--background-light-primary);
+    box-shadow: 0px 0px 15px 0px var(--background-light-primary);
+  }
 
   h3 {
     color: var(--text-color-dark-secondary);

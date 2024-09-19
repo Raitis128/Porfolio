@@ -60,6 +60,12 @@ export const ImageContainer = styled.div`
   padding: 3.5rem;
   border-radius: 50%;
 
+  &:hover {
+    -webkit-box-shadow: 0px 0px 100px 0px var(--background-light-primary);
+    -moz-box-shadow: 0px 0px 100px 0px var(--background-light-primary);
+    box-shadow: 0px 0px 100px 0px var(--background-light-primary);
+  }
+
   .mysql {
     filter: invert(99%) sepia(0%) saturate(447%) hue-rotate(171deg)
       brightness(95%) contrast(86%);
