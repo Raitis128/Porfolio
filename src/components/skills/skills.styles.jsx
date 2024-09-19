@@ -37,6 +37,14 @@ export const SkillsSection = styled.section`
       height: 7rem;
     }
   }
+
+  &.light-mode {
+    background-color: var(--background-light-secondary);
+
+    h2 {
+      color: var(--text-color-light-primary);
+    }
+  }
 `;
 
 export const ImagesSection = styled.section`
@@ -69,5 +77,20 @@ export const ImageContainer = styled.div`
   .mysql {
     filter: invert(99%) sepia(0%) saturate(447%) hue-rotate(171deg)
       brightness(95%) contrast(86%);
+  }
+
+  &.light-mode {
+    border: 0.5rem solid var(--background-dark-primary);
+
+    &:hover {
+      -webkit-box-shadow: 0px 0px 100px 0px var(--background-dark-primary);
+      -moz-box-shadow: 0px 0px 100px 0px var(--background-dark-primary);
+      box-shadow: 0px 0px 100px 0px var(--background-dark-primary);
+    }
+
+    .mysql {
+      filter: invert(11%) sepia(7%) saturate(4275%) hue-rotate(174deg)
+        brightness(92%) contrast(88%);
+    }
   }
 `;

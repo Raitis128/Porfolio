@@ -6,7 +6,7 @@ import HiddenNavigation from "../hidden-navigation/hidden-navigation-component";
 import { useEffect, useState } from "react";
 
 const Navigation = () => {
-  const links = ["About", "Skills", "Projects", "Contact me"];
+  const links = ["About", "Skills", "Projects", "Contact"];
 
   const addLinks = (links) =>
     links.map((link) => (
@@ -37,7 +37,7 @@ const Navigation = () => {
     <NavigationHeader id="navigationHeader" style={{ position: position }}>
       <Nav id="navigation">
         <span>&lt;Raitis Ižiks /&gt;</span>
-        <LinksContainer>{addLinks(links)}</LinksContainer>
+        <LinksContainer id="linksContainer">{addLinks(links)}</LinksContainer>
         <ToggleBurger />
       </Nav>
       <HiddenNavigation links={links} addLinks={addLinks} display={display} />

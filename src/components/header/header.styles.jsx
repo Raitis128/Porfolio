@@ -52,9 +52,14 @@ export const HeaderComponent = styled.header`
       margin-left: 0;
     }
   }
+
+  &.light-mode {
+    background-color: var(--background-light-secondary);
+    color: var(--text-color-light-primary);
+  }
 `;
 
-export const Container = styled.section`
+export const HeaderContainer = styled.section`
   min-width: 41rem;
   display: flex;
   flex-direction: column;
@@ -127,6 +132,17 @@ export const Container = styled.section`
         font-size: 2rem;
         margin-bottom: 2.5rem;
       }
+    }
+  }
+
+  &.light-mode {
+    h2 {
+      color: var(--text-color-light-secondary);
+    }
+
+    button {
+      background-color: var(--text-color-light-secondary);
+      color: var(--background-light-secondary);
     }
   }
 `;

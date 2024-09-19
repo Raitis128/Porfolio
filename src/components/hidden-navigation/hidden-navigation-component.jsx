@@ -1,10 +1,9 @@
 import { HiddenNav } from "./hidden-navigation-styles";
 import PropTypes from "prop-types";
 
-
 const HiddenNavigation = (props) => {
   return (
-    <HiddenNav style={{ display: props.display }}>
+    <HiddenNav id="hiddenNav" style={{ display: props.display }}>
       {props.addLinks(props.links)}
     </HiddenNav>
   );

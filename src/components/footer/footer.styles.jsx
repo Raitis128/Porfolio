@@ -13,4 +13,9 @@ export const FooterComponent = styled.footer`
   @media only screen and (max-width: 1024px) {
     font-size: 1.5rem;
   }
+
+  &.light-mode {
+    background-color: var(--background-light-primary);
+    color: var(--text-color-light-primary);
+  }
 `;

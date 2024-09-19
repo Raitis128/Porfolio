@@ -22,6 +22,15 @@ export const ProjectsSection = styled.section`
   @media only screen and (max-width: 425px) {
     padding: 5rem 0;
   }
+
+  &.light-mode {
+    background-color: var(--background-light-primary);
+    color: var(--text-color-light-primary);
+
+    h2 {
+      color: var(--text-color-light-primary);
+    }
+  }
 `;
 
 export const Project = styled.section`
@@ -171,6 +180,25 @@ export const Card = styled.section`
     &:nth-child(odd),
     &:nth-child(even) {
       border-radius: 0;
+    }
+  }
+
+  &.light-mode {
+    background-color: var(--background-light-secondary);
+    box-shadow: 0px 0px 5px 0px rgb(255, 255, 255);
+
+    &:hover {
+      -webkit-box-shadow: 0px 0px 15px 0px var(--background-dark-primary);
+      -moz-box-shadow: 0px 0px 15px 0px var(--background-dark-primary);
+      box-shadow: 0px 0px 15px 0px var(--background-dark-primary);
+    }
+
+    h3 {
+      color: var(--text-color-light-secondary);
+    }
+
+    a {
+      color: var(--text-color-light-primary);
     }
   }
 `;

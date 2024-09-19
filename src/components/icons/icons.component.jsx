@@ -20,7 +20,7 @@ const icons = [
 
 const Icons = () => {
   return (
-    <IconsSection>
+    <IconsSection className="icons">
       {icons.map((icon, index) => {
         return (
           <a href={icon.href} target="_blank" key={index}>

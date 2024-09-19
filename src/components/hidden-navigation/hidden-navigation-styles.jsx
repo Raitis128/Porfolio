@@ -14,4 +14,12 @@ export const HiddenNav = styled.nav`
   li {
     list-style: none;
   }
+
+  &.light-mode {
+    a {
+      color: var(--text-color-light-primary);
+      background-color: var(--background-light-primary);
+      border-bottom: 1px solid var(--text-color-light-primary);
+    }
+  }
 `;

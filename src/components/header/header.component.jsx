@@ -1,4 +1,8 @@
-import { HeaderComponent, Container, ButtonContainer } from "./header.styles";
+import {
+  HeaderComponent,
+  HeaderContainer,
+  ButtonContainer,
+} from "./header.styles";
 
 import DesktopImage from "../../assets/img/Raitis-desktop.png";
 import PhoneImage from "../../assets/img/Raitis-phone.png";
@@ -54,7 +58,7 @@ const Header = () => {
 
   return (
     <HeaderComponent id="header">
-      <Container>
+      <HeaderContainer id="headerContainer">
         <h1>I&apos;m Raitis Ižiks</h1>
         <h2 id="careers">Web developer</h2>
         <img
@@ -68,7 +72,7 @@ const Header = () => {
           </form>
           <Icons />
         </ButtonContainer>
-      </Container>
+      </HeaderContainer>
       <img
         src={DesktopImage}
         alt="Photo of person who made portfolio"

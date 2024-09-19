@@ -17,6 +17,10 @@ export const BurgerButton = styled.button`
   align-items: center;
   height: 100%;
 
+  &.light-mode {
+    color: var(--text-color-light-primary);
+  }
+
   i {
     display: none;
 

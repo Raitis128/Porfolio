@@ -68,4 +68,18 @@ export const ContactSection = styled.section`
   @media only screen and (max-width: 768px) {
     padding: 5rem 0;
   }
+
+  &.light-mode {
+    background-color: var(--background-light-secondary);
+    color: var(--text-color-light-primary);
+
+    h2 {
+      color: var(--text-color-light-primary);
+    }
+
+    button {
+      background-color: var(--text-color-light-secondary);
+      color: var(--text-color-dark-primary);
+    }
+  }
 `;

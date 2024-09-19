@@ -41,6 +41,12 @@ export const Nav = styled.nav`
       font-size: 1.8rem;
     }
   }
+
+  &.light-mode {
+    background-color: var(--background-light-primary);
+    color: var(--text-color-light-primary);
+    border-bottom: 1px solid var(--text-color-light-primary);
+  }
 `;
 
 export const LinksContainer = styled.ul`
@@ -60,5 +66,16 @@ export const LinksContainer = styled.ul`
 
   li:hover {
     color: var(--text-color-dark-secondary);
+  }
+
+  &.light-mode {
+    li {
+      background-color: var(--background-light-primary);
+      color: var(--text-color-light-primary);
+
+      &:hover {
+        color: var(--text-color-light-secondary);
+      }
+    }
   }
 `;

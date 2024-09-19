@@ -15,6 +15,16 @@ const projects = [
     imageAlt: "Image of project",
   },
   {
+    title: "Project title",
+    tools: ["CSS", "Javascript", "API", "Async"],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s",
+    github: "",
+    link: "",
+    image: ProjectImage,
+    imageAlt: "Image of project",
+  },
+  {
     title: "Pokémon Search App",
     tools: ["CSS", "Javascript", "API", "Async"],
     description:
@@ -40,7 +50,7 @@ const Projects = () => {
                 <img src={project.image} alt={project.imageAlt} />
               ) : null}
 
-              <Card>
+              <Card className="cards">
                 <h3>{project.title}</h3>
                 <Tools>
                   {project.tools.map((tool, index) => {

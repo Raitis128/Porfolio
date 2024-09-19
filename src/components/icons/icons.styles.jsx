@@ -29,4 +29,15 @@ export const IconsSection = styled.section`
       margin-right: 0;
     }
   }
+
+  &.light-mode {
+    a {
+      color: var(--text-color-light-primary);
+    }
+
+    .leetcode {
+      filter: invert(11%) sepia(7%) saturate(4275%) hue-rotate(174deg)
+        brightness(92%) contrast(88%);
+    }
+  }
 `;

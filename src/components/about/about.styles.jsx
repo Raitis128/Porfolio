@@ -47,4 +47,13 @@ export const AboutArticle = styled.article`
   @media only screen and (max-width: 425px) {
     padding: 4rem 2rem;
   }
+
+  &.light-mode {
+    color: var(--text-color-light-primary);
+    background-color: var(--background-light-primary);
+
+    h2 {
+      color: var(--text-color-light-primary);
+    }
+  }
 `;
