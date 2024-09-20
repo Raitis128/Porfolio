@@ -15,11 +15,13 @@
 
     /* !Colors for light mode */
 
-    --background-light-primary: #51C1C8;
-    --background-light-secondary: #E2FDFF;
+    --background-light-primary: #a8dadc;
+    --background-light-secondary: #f1faee;
 
     --text-color-light-primary: #0D1B2A;
-    --text-color-light-secondary: #D62839;
+    /* --text-color-light-secondary: #6063EB; */
+    --text-color-light-secondary: #DB524B;
+    /* --text-color-light-secondary: #4B95DB; */
 }
 
 html {

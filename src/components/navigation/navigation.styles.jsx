@@ -22,7 +22,7 @@ export const Nav = styled.nav`
 
   span {
     font-size: 3.2rem;
-    font-family: "Architects Daughter", cursive;
+    font-family: "Ubuntu", sans-serif;
     margin-left: 7rem;
 
     @media only screen and (max-width: 1440px) {

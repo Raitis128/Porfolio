@@ -79,7 +79,7 @@ export const ContactSection = styled.section`
 
     button {
       background-color: var(--text-color-light-secondary);
-      color: var(--text-color-dark-primary);
+      color: var(--background-light-secondary);
     }
   }
 `;

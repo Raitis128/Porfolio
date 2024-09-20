@@ -63,17 +63,18 @@ export const Project = styled.section`
     gap: 0;
 
     img {
+      display: block;
       max-width: 50rem;
       min-height: 40rem;
       width: 100%;
       margin: 0 auto;
     }
 
-    img:nth-child(odd) {
+    img.odd {
       border-radius: 1rem 1rem 0 0;
     }
 
-    img:nth-child(even) {
+    img.even {
       border-radius: 0 0 1rem 1rem;
     }
   }
@@ -186,6 +187,7 @@ export const Card = styled.section`
   &.light-mode {
     background-color: var(--background-light-secondary);
     box-shadow: 0px 0px 5px 0px rgb(255, 255, 255);
+    color: var(--text-color-light-primary);
 
     &:hover {
       -webkit-box-shadow: 0px 0px 15px 0px var(--background-dark-primary);
@@ -199,6 +201,10 @@ export const Card = styled.section`
 
     a {
       color: var(--text-color-light-primary);
+    }
+
+    @media only screen and (max-width: 768px) {
+      box-shadow: none;
     }
   }
 `;

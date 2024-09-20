@@ -47,8 +47,12 @@ const Projects = () => {
           return (
             <Project key={index}>
               {index % 2 === 0 ? (
-                <a href={project.github} target="_blank">
-                  <img src={project.image} alt={project.imageAlt} />
+                <a href={project.link} target="_blank">
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt}
+                    className="odd"
+                  />
                 </a>
               ) : null}
 
@@ -71,8 +75,12 @@ const Projects = () => {
               </Card>
 
               {index % 2 === 0 ? null : (
-                <a href={project.github} target="_blank">
-                  <img src={project.image} alt={project.imageAlt} />
+                <a href={project.link} target="_blank">
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt}
+                    className="even"
+                  />
                 </a>
               )}
             </Project>
