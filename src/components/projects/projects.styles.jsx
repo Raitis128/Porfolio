@@ -106,6 +106,16 @@ export const Card = styled.section`
     box-shadow: 0px 0px 15px 0px var(--background-light-primary);
   }
 
+  .date-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  time {
+    font-size: 2rem;
+  }
+
   h3 {
     color: var(--text-color-dark-secondary);
     font-size: 2.6rem;
@@ -120,6 +130,7 @@ export const Card = styled.section`
   p {
     font-size: 1.8rem;
     margin-bottom: 4rem;
+    text-align: justify;
   }
 
   i {
@@ -129,26 +140,30 @@ export const Card = styled.section`
   @media only screen and (max-width: 1024px) {
     max-width: 42rem;
     min-height: 24rem;
-    padding: 4rem 4rem;
+    padding: 3rem 3rem;
 
     h3 {
-      font-size: 2rem;
+      font-size: 2.3rem;
       margin-bottom: 2rem;
     }
 
     span {
-      font-size: 1.4rem;
+      font-size: 1.7rem;
       margin-right: 2rem;
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-bottom: 3rem;
     }
 
     i {
-      font-size: 2rem !important;
+      font-size: 2.5rem !important;
       margin-right: 1.5rem;
+    }
+
+    time {
+      font-size: 1.8rem;
     }
   }
 
@@ -169,11 +184,6 @@ export const Card = styled.section`
 
     h3 {
       text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
     }
   }
 

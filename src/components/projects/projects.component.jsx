@@ -13,6 +13,8 @@ const projects = [
     link: "",
     image: ProjectImage,
     imageAlt: "Image of project",
+    dateTime: "2024-01-01",
+    finishDate: "January 1, 2024",
   },
   {
     title: "Project title",
@@ -23,6 +25,8 @@ const projects = [
     link: "",
     image: ProjectImage,
     imageAlt: "Image of project",
+    dateTime: "2024-01-01",
+    finishDate: "January 1, 2024",
   },
   {
     title: "Pokémon Search App",
@@ -33,6 +37,8 @@ const projects = [
     link: "https://iziks-pokemon-app.netlify.app/",
     image: PokemonImage,
     imageAlt: "Image of project Pokémon Search App",
+    dateTime: "2024-14-09",
+    finishDate: "September 14, 2024",
   },
 ];
 
@@ -64,14 +70,17 @@ const Projects = () => {
                   })}
                 </Tools>
                 <p>{project.description}</p>
-                <nav>
-                  <a href={project.github} target="_blank">
-                    <i className="icon fa-brands fa-github fa-4x github"></i>
-                  </a>
-                  <a href={project.link} target="_blank">
-                    <i className="icon fa-solid fa-arrow-up-right-from-square fa-4x link"></i>
-                  </a>
-                </nav>
+                <section className="date-icons">
+                  <nav>
+                    <a href={project.github} target="_blank">
+                      <i className="icon fa-brands fa-github fa-4x github"></i>
+                    </a>
+                    <a href={project.link} target="_blank">
+                      <i className="icon fa-solid fa-arrow-up-right-from-square fa-4x link"></i>
+                    </a>
+                  </nav>
+                  <time dateTime={project.dateTime}>{project.finishDate}</time>
+                </section>
               </Card>
 
               {index % 2 === 0 ? null : (
