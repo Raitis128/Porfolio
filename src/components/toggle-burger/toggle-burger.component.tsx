@@ -18,6 +18,7 @@ const ToggleBurger = () => {
     const iconsEls = document.getElementsByClassName("icons");
     const imageContainerEls = document.getElementsByClassName("imageContainer");
     const cardEls = document.getElementsByClassName("cards");
+    const burgerIconEl = document.getElementById("burgerIcon");
 
     const components = [
       toggleEl,
@@ -54,6 +55,22 @@ const ToggleBurger = () => {
       });
     };
 
+    const changeBurgerToCloseBtn = () => {
+      if (burgerIconEl) {
+        if (burgerIconEl.classList.contains("fa-bars")) {
+          burgerIconEl.classList.remove("fa-bars");
+          burgerIconEl.classList.add("fa-xmark");
+        } else {
+          burgerIconEl.classList.remove("fa-xmark");
+          burgerIconEl.classList.add("fa-bars");
+        }
+      }
+    };
+
+    if (burgerIconEl) {
+      burgerIconEl.addEventListener("click", changeBurgerToCloseBtn);
+    }
+
     if (toggleEl) {
       toggleEl.addEventListener("click", toggleDarkLightMode);
     }
@@ -61,6 +78,10 @@ const ToggleBurger = () => {
     return () => {
       if (toggleEl) {
         toggleEl.removeEventListener("click", toggleDarkLightMode);
+      }
+
+      if (burgerIconEl) {
+        burgerIconEl.removeEventListener("click", changeBurgerToCloseBtn);
       }
     };
   });

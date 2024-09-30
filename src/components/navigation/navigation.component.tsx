@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 const Navigation = () => {
   const links = ["About", "Skills", "Projects", "Contact"];
 
-  type Position = "fixed" | "static";
+  const [isNavVisible, setIsNavVisible] = useState(false);
 
   const addLinks = (links: string[]) =>
     links.map((link) => (
@@ -17,53 +17,37 @@ const Navigation = () => {
       </a>
     ));
 
-  const [display, setDisplay] = useState("none");
-  const [position, setPosition] = useState<Position>("static");
-
   useEffect(() => {
-    const burgerEl = document.getElementById("burger");
-    const burgerIconEl = document.getElementById("burgerIcon");
+    const toggleNavigation = () => {
+      setIsNavVisible(!isNavVisible);
+    };
 
-    if (!burgerEl || !burgerIconEl) {
+    const burgerEl = document.getElementById("burger");
+
+    if (!burgerEl) {
       console.log("Burger elements are not found in DOM!");
       return;
     }
 
-    const addHiddenNavigation = () => {
-      setDisplay(display === "none" ? "block" : "none");
-      setPosition(position === "static" ? "fixed" : "static");
-    };
-
-    const changeBurgerToCloseBtn = () => {
-      if (burgerIconEl.classList.contains("fa-bars")) {
-        burgerIconEl.classList.remove("fa-bars");
-        burgerIconEl.classList.add("fa-xmark");
-      } else {
-        burgerIconEl.classList.remove("fa-xmark");
-        burgerIconEl.classList.add("fa-bars");
-      }
-    };
-
-    const handleBurgerClick = () => {
-      addHiddenNavigation();
-      changeBurgerToCloseBtn();
-    };
-
-    burgerEl.addEventListener("click", handleBurgerClick);
+    burgerEl.addEventListener("click", toggleNavigation);
 
     return () => {
-      burgerEl.removeEventListener("click", handleBurgerClick);
+      burgerEl.removeEventListener("click", toggleNavigation);
     };
-  }, [display, position]);
+  }, [isNavVisible]);
 
   return (
-    <NavigationHeader id="navigationHeader" style={{ position: position }}>
+    <NavigationHeader className={isNavVisible ? "fixed" : "static"}>
       <Nav id="navigation">
         <span>&lt;Raitis Ižiks /&gt;</span>
         <LinksContainer id="linksContainer">{addLinks(links)}</LinksContainer>
         <ToggleBurger />
       </Nav>
-      <HiddenNavigation links={links} addLinks={addLinks} display={display} />
+      <HiddenNavigation
+        links={links}
+        addLinks={addLinks}
+        isVisible={isNavVisible}
+      />
     </NavigationHeader>
   );
 };

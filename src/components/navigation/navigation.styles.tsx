@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const NavigationHeader = styled.header`
   width: 100%;
   z-index: 1;
+
+  &.fixed {
+    position: fixed;
+  }
+
+  &.static {
+    position: static;
+  }
 `;
 
 export const Nav = styled.nav`

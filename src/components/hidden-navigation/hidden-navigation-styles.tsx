@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const HiddenNav = styled.nav`
+  &.visible {
+    display: block;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
   a {
     display: flex;
     justify-content: center;

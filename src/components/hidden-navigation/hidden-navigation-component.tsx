@@ -3,14 +3,14 @@ import { HiddenNav } from "./hidden-navigation-styles";
 import PropTypes from "prop-types";
 
 interface Props {
-  display: string;
+  isVisible: boolean;
   links: string[];
   addLinks: (links: string[]) => ReactNode;
 }
 
-const HiddenNavigation = ({ display, addLinks, links }: Props) => {
+const HiddenNavigation = ({ isVisible, addLinks, links }: Props) => {
   return (
-    <HiddenNav id="hiddenNav" style={{ display: display }}>
+    <HiddenNav id="hiddenNav" className={isVisible ? "visible" : "hidden"}>
       {addLinks(links)}
     </HiddenNav>
   );
@@ -19,7 +19,7 @@ const HiddenNavigation = ({ display, addLinks, links }: Props) => {
 HiddenNavigation.propTypes = {
   addLinks: PropTypes.func.isRequired,
   links: PropTypes.arrayOf(PropTypes.string).isRequired,
-  display: PropTypes.string.isRequired,
+  isVisible: PropTypes.bool.isRequired,
 };
 
 export default HiddenNavigation;
