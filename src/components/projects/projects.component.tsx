@@ -1,5 +1,4 @@
 import { ProjectsSection, Project, Card, Tools } from "./projects.styles";
-import React from "react";
 
 import PokemonImage from "../../assets/img/projects/pokemon.png";
 import ProjectImage from "../../assets/img/project.jpg";

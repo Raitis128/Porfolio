@@ -3,7 +3,7 @@ import { NavigationHeader, Nav, LinksContainer } from "./navigation.styles";
 import ToggleBurger from "../toggle-burger/toggle-burger.component";
 import HiddenNavigation from "../hidden-navigation/hidden-navigation-component";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navigation = () => {
   const links = ["About", "Skills", "Projects", "Contact"];

@@ -1,5 +1,4 @@
 import { SkillsSection, ImagesSection, ImageContainer } from "./skills.styles";
-import React from "react";
 
 import HTMLIcon from "../../assets/img/skills/html.png";
 import CSSIcon from "../../assets/img/skills/css-3.png";
@@ -14,8 +13,13 @@ import FirebaseIcon from "../../assets/img/skills/firebase.png";
 import FigmaIcon from "../../assets/img/skills/figma.png";
 import NetlifyIcon from "../../assets/img/skills/netlify.png";
 
+type Icons = {
+  src: string;
+  alt: string;
+};
+
 const Skills = () => {
-  const icons = [
+  const icons: Icons[] = [
     { src: HTMLIcon, alt: "Icon of html language" },
     { src: CSSIcon, alt: "Icon of css language" },
     { src: JSIcon, alt: "Icon of javascript programming language" },
@@ -30,7 +34,7 @@ const Skills = () => {
     { src: NetlifyIcon, alt: "Icon of netlify" },
   ];
 
-  const addIcons = (icons) => {
+  const addIcons = (icons: Icons[]) => {
     return icons.map((icon, index) => {
       return (
         <ImageContainer key={index} className="imageContainer">

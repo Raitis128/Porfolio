@@ -11,7 +11,7 @@
   "author": "Raitis Iziks",
   "repository": "https://github.com/Raitis128/Porfolio",
   "homepage": "https://iziks.netlify.app/",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

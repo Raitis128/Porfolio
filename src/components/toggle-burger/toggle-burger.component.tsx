@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { BurgerButton, Buttons, ToggleButton } from "./toggle-burger.styles";
 
 const ToggleBurger = () => {
