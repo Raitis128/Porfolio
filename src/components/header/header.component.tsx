@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   HeaderComponent,
   HeaderContainer,
@@ -25,7 +27,7 @@ const Header = () => {
 
     const careersEl = document.getElementById("careers");
 
-    let timeoutId;
+    let timeoutId: number;
 
     const updateText = () => {
       if (careersEl) {

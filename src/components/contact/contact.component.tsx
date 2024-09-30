@@ -1,3 +1,4 @@
+import React from "react";
 import { ContactSection } from "./contact.styles";
 
 import Icons from "../icons/icons.component";

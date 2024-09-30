@@ -1,4 +1,5 @@
 import { SkillsSection, ImagesSection, ImageContainer } from "./skills.styles";
+import React from "react";
 
 import HTMLIcon from "../../assets/img/skills/html.png";
 import CSSIcon from "../../assets/img/skills/css-3.png";
@@ -36,7 +37,7 @@ const Skills = () => {
           <img
             src={icon.src}
             alt={icon.alt}
-            className={icon.src === MySQLIcon ? "mysql" : null}
+            className={icon.src === MySQLIcon ? "mysql" : undefined}
           />
         </ImageContainer>
       );

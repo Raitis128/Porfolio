@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { BurgerButton, Buttons, ToggleButton } from "./toggle-burger.styles";
 
 const ToggleBurger = () => {
@@ -54,10 +54,14 @@ const ToggleBurger = () => {
       });
     };
 
-    toggleEl.addEventListener("click", toggleDarkLightMode);
+    if (toggleEl) {
+      toggleEl.addEventListener("click", toggleDarkLightMode);
+    }
 
     return () => {
-      toggleEl.removeEventListener("click", toggleDarkLightMode);
+      if (toggleEl) {
+        toggleEl.removeEventListener("click", toggleDarkLightMode);
+      }
     };
   });
 

@@ -1,3 +1,4 @@
+import React from "react";
 import { FooterComponent } from "./footer.styles";
 
 const Footer = () => {

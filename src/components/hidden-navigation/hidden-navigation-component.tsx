@@ -1,7 +1,14 @@
+import React, { ReactNode } from "react";
 import { HiddenNav } from "./hidden-navigation-styles";
 import PropTypes from "prop-types";
 
-const HiddenNavigation = (props) => {
+interface Props {
+  display: string;
+  links: string[];
+  addLinks: (links: string[]) => ReactNode;
+}
+
+const HiddenNavigation = (props: Props) => {
   return (
     <HiddenNav id="hiddenNav" style={{ display: props.display }}>
       {props.addLinks(props.links)}

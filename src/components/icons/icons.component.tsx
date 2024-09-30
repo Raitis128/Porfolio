@@ -1,6 +1,6 @@
 import { IconsSection } from "./icons.styles";
 import LeetCode from "../../assets/img/leetcode.svg";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 const icons = [
   {
@@ -23,12 +23,14 @@ const Icons = () => {
   useEffect(() => {
     const iconsEls = Array.from(document.getElementsByClassName("icon"));
 
-    const mouseOn = (event) => {
-      event.target.classList.add("fa-beat");
+    const mouseOn = (event: Event) => {
+      const target = event.target as HTMLElement;
+      target.classList.add("fa-beat");
     };
 
-    const mouseOut = (event) => {
-      event.target.classList.remove("fa-beat");
+    const mouseOut = (event: Event) => {
+      const target = event.target as HTMLElement;
+      target.classList.remove("fa-beat");
     };
 
     iconsEls.forEach((iconEl) => {
@@ -53,7 +55,7 @@ const Icons = () => {
       {icons.map((icon, index) => {
         return (
           <a href={icon.href} target="_blank" key={index}>
-            {Object.hasOwn(icon, "src") ? (
+            {"src" in icon ? (
               <img src={icon.src} alt={icon.alt} className={icon.class}></img>
             ) : (
               <i className={icon.class}></i>

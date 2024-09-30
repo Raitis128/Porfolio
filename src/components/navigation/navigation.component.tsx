@@ -3,12 +3,14 @@ import { NavigationHeader, Nav, LinksContainer } from "./navigation.styles";
 import ToggleBurger from "../toggle-burger/toggle-burger.component";
 import HiddenNavigation from "../hidden-navigation/hidden-navigation-component";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Navigation = () => {
   const links = ["About", "Skills", "Projects", "Contact"];
 
-  const addLinks = (links) =>
+  type Position = "fixed" | "static";
+
+  const addLinks = (links: string[]) =>
     links.map((link) => (
       <a href={`#${link.toLowerCase()}`} key={link}>
         <li>{link}</li>
@@ -16,15 +18,20 @@ const Navigation = () => {
     ));
 
   const [display, setDisplay] = useState("none");
-  const [position, setPosition] = useState("static");
+  const [position, setPosition] = useState<Position>("static");
 
   useEffect(() => {
     const burgerEl = document.getElementById("burger");
     const burgerIconEl = document.getElementById("burgerIcon");
 
+    if (!burgerEl || !burgerIconEl) {
+      console.log("Burger elements are not found in DOM!");
+      return;
+    }
+
     const addHiddenNavigation = () => {
-      display === "none" ? setDisplay("block") : setDisplay("none");
-      position === "static" ? setPosition("fixed") : setPosition("static");
+      setDisplay(display === "none" ? "block" : "none");
+      setPosition(position === "static" ? "fixed" : "static");
     };
 
     const changeBurgerToCloseBtn = () => {

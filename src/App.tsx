@@ -1,3 +1,5 @@
+import React from "react";
+
 import Navigation from "./components/navigation/navigation.component";
 import Header from "./components/header/header.component";
 import About from "./components/about/about.component";

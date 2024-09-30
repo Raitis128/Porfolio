@@ -1,3 +1,4 @@
+import React from "react";
 import { AboutArticle } from "./about.styles";
 
 const About = () => {
