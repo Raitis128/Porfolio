@@ -100,6 +100,12 @@ export const Card = styled.section`
   box-shadow: 0px 0px 15px 0px rgb(0, 0, 0);
   padding: 5rem 4rem;
 
+  .icon {
+    min-width: 3rem;
+    min-height: 3rem;
+    margin-right: 3rem;
+  }
+
   &:hover {
     -webkit-box-shadow: 0px 0px 15px 0px var(--background-light-primary);
     -moz-box-shadow: 0px 0px 15px 0px var(--background-light-primary);
@@ -133,37 +139,28 @@ export const Card = styled.section`
     text-align: justify;
   }
 
-  i {
-    margin-right: 3rem;
-  }
-
   @media only screen and (max-width: 1024px) {
     max-width: 42rem;
     min-height: 24rem;
     padding: 3rem 3rem;
 
     h3 {
-      font-size: 2.3rem;
+      font-size: 2rem;
       margin-bottom: 2rem;
     }
 
     span {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       margin-right: 2rem;
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-bottom: 3rem;
     }
 
-    i {
-      font-size: 2.5rem !important;
-      margin-right: 1.5rem;
-    }
-
     time {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
 

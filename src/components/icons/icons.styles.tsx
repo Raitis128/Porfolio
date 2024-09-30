@@ -8,36 +8,28 @@ export const IconsSection = styled.section`
   max-width: 33rem;
   align-items: center;
   margin: 0 auto;
+  gap: 3rem;
 
-  .leetcode {
-    filter: invert(96%) sepia(10%) saturate(0%) hue-rotate(187deg)
-      brightness(97%) contrast(88%);
+  .icon {
     height: 100%;
     width: 100%;
-    min-width: 3.5rem;
-    min-height: 3.8rem;
+    min-width: 6.4rem;
+    min-height: 6.4rem;
   }
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 768px) {
     min-width: auto;
+    gap: 1rem;
 
-    a {
-      margin-right: 3rem;
-    }
-
-    a:last-of-type {
-      margin-right: 0;
+    .icon {
+      min-width: 3.2rem;
+      min-height: 3.2rem;
     }
   }
 
   &.light-mode {
     a {
       color: var(--text-color-light-primary);
-    }
-
-    .leetcode {
-      filter: invert(11%) sepia(7%) saturate(4275%) hue-rotate(174deg)
-        brightness(92%) contrast(88%);
     }
   }
 `;

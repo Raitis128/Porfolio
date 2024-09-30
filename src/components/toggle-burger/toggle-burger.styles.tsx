@@ -17,16 +17,18 @@ export const BurgerButton = styled.button`
   align-items: center;
   height: 100%;
 
-  &.light-mode {
-    color: var(--text-color-light-primary);
+  .burger-icon {
+    width: 3.2rem;
+    height: 3.2rem;
   }
 
-  i {
-    display: none;
+  .close-icon {
+    width: 4rem;
+    height: 4rem;
+  }
 
-    @media only screen and (max-width: 1024px) {
-      display: inline;
-    }
+  &.light-mode {
+    color: var(--text-color-light-primary);
   }
 
   @media only screen and (max-width: 760px) {

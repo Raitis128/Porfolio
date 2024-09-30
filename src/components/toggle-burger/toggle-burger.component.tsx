@@ -1,7 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BurgerButton, Buttons, ToggleButton } from "./toggle-burger.styles";
 
+import { FaBars } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5";
+
 const ToggleBurger = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     const toggleEl = document.getElementById("dark-mode");
     const navigationEl = document.getElementById("navigation");
@@ -18,7 +23,6 @@ const ToggleBurger = () => {
     const iconsEls = document.getElementsByClassName("icons");
     const imageContainerEls = document.getElementsByClassName("imageContainer");
     const cardEls = document.getElementsByClassName("cards");
-    const burgerIconEl = document.getElementById("burgerIcon");
 
     const components = [
       toggleEl,
@@ -55,22 +59,6 @@ const ToggleBurger = () => {
       });
     };
 
-    const changeBurgerToCloseBtn = () => {
-      if (burgerIconEl) {
-        if (burgerIconEl.classList.contains("fa-bars")) {
-          burgerIconEl.classList.remove("fa-bars");
-          burgerIconEl.classList.add("fa-xmark");
-        } else {
-          burgerIconEl.classList.remove("fa-xmark");
-          burgerIconEl.classList.add("fa-bars");
-        }
-      }
-    };
-
-    if (burgerIconEl) {
-      burgerIconEl.addEventListener("click", changeBurgerToCloseBtn);
-    }
-
     if (toggleEl) {
       toggleEl.addEventListener("click", toggleDarkLightMode);
     }
@@ -79,12 +67,12 @@ const ToggleBurger = () => {
       if (toggleEl) {
         toggleEl.removeEventListener("click", toggleDarkLightMode);
       }
-
-      if (burgerIconEl) {
-        burgerIconEl.removeEventListener("click", changeBurgerToCloseBtn);
-      }
     };
-  });
+  }, []);
+
+  const handleBurgerClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <Buttons>
@@ -94,8 +82,8 @@ const ToggleBurger = () => {
           <div className="circle"></div>
         </label>
       </ToggleButton>
-      <BurgerButton type="button" id="burger">
-        <i className="fa-solid fa-bars" id="burgerIcon"></i>
+      <BurgerButton type="button" id="burger" onClick={handleBurgerClick}>
+        {isMenuOpen ? <IoClose className="close-icon" /> : <FaBars className="burger-icon" />}
       </BurgerButton>
     </Buttons>
   );

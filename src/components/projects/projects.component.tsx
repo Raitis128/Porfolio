@@ -1,5 +1,8 @@
 import { ProjectsSection, Project, Card, Tools } from "./projects.styles";
 
+import { FaGithub } from "react-icons/fa";
+import { FaLink } from "react-icons/fa";
+
 import PokemonImage from "../../assets/img/projects/pokemon.png";
 import ProjectImage from "../../assets/img/project.jpg";
 
@@ -73,10 +76,10 @@ const Projects = () => {
                 <section className="date-icons">
                   <nav>
                     <a href={project.github} target="_blank">
-                      <i className="icon fa-brands fa-github fa-4x github"></i>
+                      <FaGithub className="icon" />
                     </a>
                     <a href={project.link} target="_blank">
-                      <i className="icon fa-solid fa-arrow-up-right-from-square fa-4x link"></i>
+                      <FaLink className="icon" />
                     </a>
                   </nav>
                   <time dateTime={project.dateTime}>{project.finishDate}</time>
