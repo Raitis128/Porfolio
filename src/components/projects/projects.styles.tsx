@@ -48,7 +48,7 @@ export const Project = styled.section`
     width: 56rem;
     height: 49rem;
     border-radius: 1rem;
-    object-fit: cover;
+    object-fit: fill;
   }
 
   @media only screen and (max-width: 1024px) {

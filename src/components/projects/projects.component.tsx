@@ -5,6 +5,7 @@ import { FaLink } from "react-icons/fa";
 
 import PokemonImage from "../../assets/img/projects/pokemon.png";
 import ProjectImage from "../../assets/img/project.jpg";
+import SimpleCarImage from "../../assets/img/projects/rent-car.png";
 
 const projects = [
   {
@@ -20,16 +21,16 @@ const projects = [
     finishDate: "January 1, 2024",
   },
   {
-    title: "Project title",
-    tools: ["CSS", "Javascript", "API", "Async"],
+    title: "Simple Car",
+    tools: ["Typescript", "React", "Styled-components"],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s",
-    github: "",
-    link: "",
-    image: ProjectImage,
-    imageAlt: "Image of project",
-    dateTime: "2024-01-01",
-    finishDate: "January 1, 2024",
+      "Simple Car is a user-friendly web application for car rentals. It features a dynamic search form for location and dates, a car selection dropdown with real-time updates on vehicle details, and informative sections highlighting the benefits of renting with us, FAQs, and contact information. Future enhancements will include backend integration for a complete rental experience.",
+    github: "https://github.com/Raitis128/rent-car-app",
+    link: "https://simple-car.netlify.app/",
+    image: SimpleCarImage,
+    imageAlt: "Image of project Simple Car",
+    dateTime: "2024-05-10",
+    finishDate: "October 5, 2024",
   },
   {
     title: "Pokémon Search App",
