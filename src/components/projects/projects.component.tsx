@@ -4,21 +4,21 @@ import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 
 import PokemonImage from "../../assets/img/projects/pokemon.png";
-import ProjectImage from "../../assets/img/project.jpg";
 import SimpleCarImage from "../../assets/img/projects/rent-car.png";
+import GameHubImage from "../../assets/img/projects/game-hub2.png";
 
 const projects = [
   {
-    title: "Project title",
-    tools: ["CSS", "Javascript", "API", "Async"],
+    title: "Game Hub",
+    tools: ["Typescript", "React", "Chakra UI"],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s",
-    github: "",
-    link: "",
-    image: ProjectImage,
-    imageAlt: "Image of project",
-    dateTime: "2024-01-01",
-    finishDate: "January 1, 2024",
+      "Game discovery APP is a video game discovery web app that helps you find new and interesting games to play. With Game discovery APP, you can search for games by platform, genre, and more.",
+    github: "https://github.com/Raitis128/video-game-discovery-app",
+    link: "https://video-game-discovery-app-beta.vercel.app/",
+    image: GameHubImage,
+    imageAlt: "Image of project Game Hub",
+    dateTime: "2024-08-10",
+    finishDate: "October 8, 2024",
   },
   {
     title: "Simple Car",
