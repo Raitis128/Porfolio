@@ -6,8 +6,21 @@ import { FaLink } from "react-icons/fa";
 import PokemonImage from "../../assets/img/projects/pokemon.png";
 import SimpleCarImage from "../../assets/img/projects/rent-car.png";
 import GameHubImage from "../../assets/img/projects/game-hub2.png";
+import TireRepair from "../../assets/img/projects/tire-repair.png";
 
 const projects = [
+  {
+    title: "Raderdienst",
+    tools: ["Typescript", "React", "Chakra UI", "Swiper.js"],
+    description:
+      "Raderdienst is a tire repair web app. There you can find all contact information (phone, email, social media links), services of this company, and frequently asked questions, google maps.",
+    github: "https://github.com/Raitis128/Raderdienst",
+    link: "https://xn--rderdienst-q5a.de/",
+    image: TireRepair,
+    imageAlt: "Image of project Raderdienst",
+    dateTime: "2024-21-10",
+    finishDate: "October 21, 2024",
+  },
   {
     title: "Game Hub",
     tools: ["Typescript", "React", "Chakra UI"],
